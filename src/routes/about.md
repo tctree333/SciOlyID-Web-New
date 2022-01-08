@@ -3,10 +3,9 @@ title: About SciOlyID
 description: SciOlyID is a group of Discord bots and associated services dedicated to helping students practice specimen identification for Science Olympiad events.
 ---
 
-<script lang="ts">
-	import Head from '$lib/components/Head.svelte';
+<script context="module">
+	export const prerender = true;
 </script>
-<Head {title} {description} />
 
 # About
 

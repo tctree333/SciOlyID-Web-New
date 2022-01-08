@@ -3,10 +3,9 @@ title: Open Source | SciOlyID
 description: SciOlyID is a group of Discord bots dedicated to helping students practice specimen ID for Science Olympiad events. SciOlyID is fully open source!
 ---
 
-<script lang="ts">
-	import Head from '$lib/components/Head.svelte';
+<script context="module">
+	export const prerender = true;
 </script>
-<Head {title} {description} />
 
 # Open Source
 
