@@ -3,7 +3,7 @@
 	import type { Load } from '@sveltejs/kit';
 
 	export const load: Load = async ({ params, fetch }) => {
-		const url = config.bots[params.bot].baseUrl + config.urlPaths.counts;
+		const url = config.bots[params.bot].baseUrl + config.apiPaths.counts;
 		const res = await fetch(url);
 
 		if (res.ok) {
@@ -34,6 +34,11 @@
 		$page.params.bot.substring(1).toLowerCase()} | SciOlyID"
 	description=""
 />
+
+<h1>
+	Image Counts: {$page.params.bot.charAt(0).toUpperCase() +
+		$page.params.bot.substring(1).toLowerCase()}
+</h1>
 
 <p>Total Images: {counts.total}</p>
 <ul>

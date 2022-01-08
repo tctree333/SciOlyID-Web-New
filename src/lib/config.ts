@@ -4,15 +4,18 @@ export default {
 			event_name: 'Rocks and Minerals',
 			baseUrl: 'https://minerobo.sciolyid.org',
 			upload: false,
-			verify: true
+			verify: true,
+			counts: true,
+			practice: false
 		}
 	},
-	urlPaths: {
+	apiPaths: {
 		items: '/about/list',
 		info: '/about/info',
 		counts: '/about/count',
 		login: '/user/login',
 		logout: '/user/logout',
 		profile: '/user/profile'
-	}
+	},
+	sitePaths: ['upload', 'verify', 'counts', 'practice'] as Readonly<string[]>
 } as const;
