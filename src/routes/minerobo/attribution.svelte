@@ -35,7 +35,7 @@
 
 <Head title="Image Attributions: Minerobo | SciOlyID" description="" />
 
-<h1>Image Attributions: Minerobo | SciOlyID</h1>
+<h1>Image Attributions: Minerobo</h1>
 
 <ul>
 	<li>
