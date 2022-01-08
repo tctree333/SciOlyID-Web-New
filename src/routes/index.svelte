@@ -1,3 +1,7 @@
+<script context="module">
+	export const prerender = true;
+</script>
+
 <script lang="ts">
 	import Head from '$lib/components/Head.svelte';
 	import Card from '$lib/components/landing/Card.svelte';
