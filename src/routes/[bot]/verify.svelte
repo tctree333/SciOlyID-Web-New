@@ -6,7 +6,7 @@
 		getImage: '/verify/',
 		confirm: '/verify/confirm',
 		stats: '/verify/stats'
-	};
+	} as const;
 
 	export const load: Load = async ({ params }) => {
 		return { props: { baseUrl: config.bots[params.bot].baseUrl } };
@@ -18,15 +18,16 @@
 	import Head from '$lib/components/Head.svelte';
 	import { getNotificationsContext } from 'svelte-notifications';
 	import type { VerifyItem, VerifyItemMore, VerifyStats } from '$lib/apiTypes';
+	import { browser } from '$app/env';
 
 	const { addNotification } = getNotificationsContext();
 
-	function alertUser(message: string, type: 'success' | 'error' | 'warning' = 'error') {
+	function alertUser(message: string, type: 'success' | 'danger' | 'warning' = 'danger') {
 		addNotification({
 			text: message,
 			position: 'bottom-right',
 			type,
-			removeAfter: 10 * 1000
+			removeAfter: 20 * 1000
 		});
 	}
 
@@ -39,8 +40,11 @@
 	let hidden = false;
 
 	function offset(set: number = undefined): number {
+		if (!browser) {
+			return 0;
+		}
 		if (set === undefined) {
-			return parseInt(localStorage.getItem('offset'));
+			return parseInt(localStorage.getItem('offset') ?? '0');
 		}
 		localStorage.setItem('offset', set.toString());
 		return set;
@@ -66,8 +70,9 @@
 				offset(data.offset);
 
 				item = data;
+				loading = false;
 
-				getRequest(verifyUrls.stats, {
+				getRequest(baseUrl + verifyUrls.stats, {
 					id: item.id
 				}).then((data) => {
 					if (!data) {
@@ -112,7 +117,7 @@
 	}
 
 	async function postValidation(data: Record<string, string>) {
-		const resp = await fetch(verifyUrls.confirm, {
+		const resp = await fetch(baseUrl + verifyUrls.confirm, {
 			method: 'POST',
 			credentials: 'include',
 			body: new URLSearchParams(data)
@@ -130,6 +135,8 @@
 			alertUser('Something went wrong...');
 		}
 	}
+
+	updateImage();
 </script>
 
 <Head
@@ -143,79 +150,82 @@
 		$page.params.bot.substring(1).toLowerCase()}
 </h1>
 
-<div {hidden}>
-	<p>
-		Is this an image of <span>{loading ? '...' : item.item}</span>?
-	</p>
+{#if !hidden}
 	<div>
 		<p>
-			Image ID: <span>{loading ? '...' : item.id.slice(0, 7)}</span>
+			Is this an image of <span>{loading ? '...' : item.item}</span>?
 		</p>
 		<div>
 			<p>
-				{stats.valid}
+				Image ID: <span>{loading ? '...' : item.id.slice(0, 7)}</span>
 			</p>
-			<p>
-				{stats.duplicate}
-			</p>
-			<p>
-				{stats.invalid}
-			</p>
-		</div>
-	</div>
-	<div>
-		<div>
-			<img
-				src={loading ? '/illustrations/loading.svg' : baseUrl + item.url}
-				alt="possible specimen"
-			/>
-		</div>
-
-		{#if !loading && item.duplicates}
 			<div>
-				<p>Possible Duplicates:</p>
-				{#each item.duplicates as duplicate}
-					<img src={duplicate} alt="a possible duplicate" />
-				{/each}
+				<p>
+					{loading ? 0 : stats.valid}
+				</p>
+				<p>
+					{loading ? 0 : stats.duplicate}
+				</p>
+				<p>
+					{loading ? 0 : stats.invalid}
+				</p>
 			</div>
-		{/if}
-	</div>
-	<div>
+		</div>
 		<div>
-			<button
-				on:click={() => {
-					updateImage(offset() - 1);
-				}}
-				disabled={loading}>Back</button
-			>
-			<button
-				on:click={() => {
-					genValidation('valid');
-				}}
-				disabled={loading}>Valid</button
-			>
-			<button
-				on:click={() => {
-					genValidation('duplicate');
-				}}
-				disabled={loading}>Duplicate</button
-			>
-			<button
-				on:click={() => {
-					genValidation('invalid');
-				}}
-				disabled={loading}>Invalid</button
-			>
-			<button
-				on:click={() => {
-					updateImage();
-				}}
-				disabled={loading}>Skip</button
-			>
+			<div>
+				<img
+					src={loading ? '/illustrations/loading.svg' : baseUrl + item.url}
+					alt="possible specimen"
+				/>
+			</div>
+
+			{#if !loading && item.duplicates}
+				<div>
+					<p>Possible Duplicates:</p>
+					{#each item.duplicates as duplicate}
+						<img src={duplicate} alt="a possible duplicate" />
+					{/each}
+				</div>
+			{/if}
+		</div>
+		<div>
+			<div>
+				<button
+					on:click={() => {
+						updateImage(offset() - 1);
+					}}
+					disabled={loading}>Back</button
+				>
+				<button
+					on:click={() => {
+						genValidation('valid');
+					}}
+					disabled={loading}>Valid</button
+				>
+				<button
+					on:click={() => {
+						genValidation('duplicate');
+					}}
+					disabled={loading}>Duplicate</button
+				>
+				<button
+					on:click={() => {
+						genValidation('invalid');
+					}}
+					disabled={loading}>Invalid</button
+				>
+				<button
+					on:click={() => {
+						updateImage();
+					}}
+					disabled={loading}>Skip</button
+				>
+			</div>
 		</div>
 	</div>
-</div>
-
+{:else}
+	<p>No images to verify!</p>
+{/if}
 <div>
 	<div>
 		<p>Help maintain the quality of images used by the bot by verifying user-uploaded images.</p>
