@@ -31,3 +31,24 @@ export interface ListNoGroups {
 	items: string[];
 }
 export type BotList = ListGroups | ListNoGroups;
+
+// /verify/
+interface VerifyItemEnd {
+	end: true;
+}
+export interface VerifyItemMore {
+	id: string;
+	item: string;
+	duplicates: string[];
+	url: string;
+	offset: number;
+	end: false;
+}
+export type VerifyItem = VerifyItemMore | VerifyItemEnd;
+
+// /verify/stats
+export interface VerifyStats {
+	valid: number;
+	invalid: number;
+	duplicate: number;
+}
