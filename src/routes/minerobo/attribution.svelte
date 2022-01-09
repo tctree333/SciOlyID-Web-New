@@ -35,7 +35,7 @@
 
 <Head
 	title="Image Attributions: Minerobo | SciOlyID"
-	description="Image credits and attribution for {config.bots[$page.params.bot].eventName}"
+	description="Image credits and attribution for Rocks and Minerals"
 />
 
 <h1>Image Attributions: Minerobo</h1>
