@@ -8,6 +8,8 @@
 
 	export let index = true;
 
+	export let plausibleDomain: 'sciolyid.org' | 'orni.sciolyid.org' = 'sciolyid.org';
+
 	interface PageImage {
 		url: string;
 		type: string;
@@ -70,4 +72,6 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
 
 	<Favicons />
+
+	<script defer data-domain={plausibleDomain} src="/owo/script.js" data-api="/owo/event"></script>
 </svelte:head>
