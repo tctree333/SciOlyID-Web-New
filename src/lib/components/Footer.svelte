@@ -4,7 +4,7 @@
 			class="flex flex-wrap items-center justify-center w-full px-6 py-3 text-xl text-white text-bold"
 		>
 			<li class="mx-4 hover:underline">
-				<a href="/source/">Open Source</a>
+				<a sveltekit:prefetch href="/source/">Open Source</a>
 			</li>
 		</ul>
 	</div>

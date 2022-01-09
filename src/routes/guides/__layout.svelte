@@ -27,7 +27,7 @@
 	<ol>
 		{#each docs as { title, path }}
 			<li>
-				<a href={path}>{title}</a>
+				<a sveltekit:prefetch href={path}>{title}</a>
 			</li>
 		{/each}
 	</ol>

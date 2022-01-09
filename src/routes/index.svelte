@@ -42,7 +42,7 @@
 				</defs>
 			</svg>Join the Discord</a
 		>
-		<a href="/guides/getting-started/" class=""
+		<a sveltekit:prefetch href="/guides/getting-started/" class=""
 			>Get Started<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
