@@ -8,16 +8,14 @@
 		<li><a sveltekit:prefetch href="/">SciOlyID</a></li>
 		<li><a sveltekit:prefetch href="/about/">About</a></li>
 		<li><a sveltekit:prefetch href="/guides/">Guides</a></li>
-		{#each Object.keys(config.bots) as bot}
+		{#each Object.entries(config.bots) as [id, bot]}
 			<li>
 				<ul>
-					<span>{bot.charAt(0).toUpperCase() + bot.substring(1)}</span>
-					{#each config.sitePaths as path}
-						{#if config.bots[bot][path]}
+					<span>{bot.eventName}</span>
+					{#each Object.entries(config.sitePaths) as [path, info]}
+						{#if bot[path]}
 							<li>
-								<a sveltekit:prefetch href="/{bot}/{path}/"
-									>{path.charAt(0).toUpperCase() + path.substring(1)}</a
-								>
+								<a sveltekit:prefetch href="/{id}/{path}/">{info.name}</a>
 							</li>
 						{/if}
 					{/each}

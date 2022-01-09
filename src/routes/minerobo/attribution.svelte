@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
 
-	export const load: Load = async ({ params, fetch }) => {
+	export const load: Load = async ({ fetch }) => {
 		const url =
 			'https://raw.githubusercontent.com/tctree333/SciOlyID-Web/master/src/_data/minerobo_attributions.json';
 		if (!url) return { status: 404, message: 'Not found' };
@@ -33,7 +33,10 @@
 	const renderedAttribs = Object.values(attribution).map((attrib) => md.renderInline(attrib));
 </script>
 
-<Head title="Image Attributions: Minerobo | SciOlyID" description="" />
+<Head
+	title="Image Attributions: Minerobo | SciOlyID"
+	description="Image credits and attribution for {config.bots[$page.params.bot].eventName}"
+/>
 
 <h1>Image Attributions: Minerobo</h1>
 

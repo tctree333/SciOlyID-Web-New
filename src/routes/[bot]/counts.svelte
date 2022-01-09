@@ -30,13 +30,14 @@
 </script>
 
 <Head
-	title="Image Counts: {$page.params.bot.charAt(0).toUpperCase() +
-		$page.params.bot.substring(1)} | SciOlyID"
-	description=""
+	title="Image Counts: {config.bots[$page.params.bot].botName} | SciOlyID"
+	description="View the number of images available for each specimen for {config.bots[
+		$page.params.bot
+	].eventName}"
 />
 
 <h1>
-	Image Counts: {$page.params.bot.charAt(0).toUpperCase() + $page.params.bot.substring(1)}
+	Image Counts: {config.bots[$page.params.bot].botName}
 </h1>
 
 <p>Total Images: {counts.total}</p>

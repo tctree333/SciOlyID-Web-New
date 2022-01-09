@@ -6,7 +6,7 @@
 	export const load: Load = async ({ url, params }) => {
 		if (
 			Object.keys(config.bots).includes(params.bot) &&
-			config.sitePaths.includes(url.pathname.split('/')[2]) &&
+			Object.keys(config.sitePaths).includes(url.pathname.split('/')[2]) &&
 			config.bots[params.bot][url.pathname.split('/')[2]]
 		) {
 			return {

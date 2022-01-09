@@ -140,13 +140,13 @@
 </script>
 
 <Head
-	title="Verify Images: {$page.params.bot.charAt(0).toUpperCase() +
-		$page.params.bot.substring(1)} | SciOlyID"
-	description="Verify bot images to ensure image quality and accuracy."
+	title="Verify Images: {config.bots[$page.params.bot].botName} | SciOlyID"
+	description="Verify {config.bots[$page.params.bot]
+		.eventName} images to ensure image quality and accuracy."
 />
 
 <h1>
-	Verify Images: {$page.params.bot.charAt(0).toUpperCase() + $page.params.bot.substring(1)}
+	Verify Images: {config.bots[$page.params.bot].botName}
 </h1>
 
 {#if !hidden}

@@ -1,7 +1,8 @@
 export default {
 	bots: {
 		minerobo: {
-			event_name: 'Rocks and Minerals',
+			eventName: 'Rocks and Minerals',
+			botName: 'Minerobo',
 			baseUrl: 'https://minerobo.sciolyid.org',
 			upload: false,
 			verify: true,
@@ -18,5 +19,11 @@ export default {
 		logout: '/user/logout',
 		profile: '/user/profile'
 	},
-	sitePaths: ['upload', 'verify', 'counts', 'practice', 'attribution'] as Readonly<string[]>
+	sitePaths: {
+		upload: { name: 'Upload Images' },
+		verify: { name: 'Verify Images' },
+		counts: { name: 'Image Counts' },
+		practice: { name: 'Web Practice' },
+		attribution: { name: 'Image Attributions' }
+	}
 } as const;
