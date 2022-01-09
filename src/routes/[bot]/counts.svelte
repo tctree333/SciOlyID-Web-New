@@ -31,13 +31,12 @@
 
 <Head
 	title="Image Counts: {$page.params.bot.charAt(0).toUpperCase() +
-		$page.params.bot.substring(1).toLowerCase()} | SciOlyID"
+		$page.params.bot.substring(1)} | SciOlyID"
 	description=""
 />
 
 <h1>
-	Image Counts: {$page.params.bot.charAt(0).toUpperCase() +
-		$page.params.bot.substring(1).toLowerCase()}
+	Image Counts: {$page.params.bot.charAt(0).toUpperCase() + $page.params.bot.substring(1)}
 </h1>
 
 <p>Total Images: {counts.total}</p>

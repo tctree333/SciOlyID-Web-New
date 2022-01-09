@@ -141,13 +141,12 @@
 
 <Head
 	title="Verify Images: {$page.params.bot.charAt(0).toUpperCase() +
-		$page.params.bot.substring(1).toLowerCase()} | SciOlyID"
+		$page.params.bot.substring(1)} | SciOlyID"
 	description="Verify bot images to ensure image quality and accuracy."
 />
 
 <h1>
-	Verify Images: {$page.params.bot.charAt(0).toUpperCase() +
-		$page.params.bot.substring(1).toLowerCase()}
+	Verify Images: {$page.params.bot.charAt(0).toUpperCase() + $page.params.bot.substring(1)}
 </h1>
 
 {#if !hidden}
