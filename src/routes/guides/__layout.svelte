@@ -10,7 +10,6 @@
 			})
 		);
 		docs.sort((a, b) => a.order - b.order);
-		console.log(docs);
 		return {
 			props: {
 				docs
