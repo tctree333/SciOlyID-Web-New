@@ -9,6 +9,16 @@ export default {
 			counts: true,
 			practice: false,
 			attribution: true
+		},
+		'bird-id': {
+			eventName: 'Ornithology',
+			botName: 'Bird-ID',
+			baseUrl: 'https://orni-api.sciolyid.org',
+			upload: false,
+			verify: false,
+			counts: false,
+			practice: true,
+			attribution: false
 		}
 	},
 	apiPaths: {

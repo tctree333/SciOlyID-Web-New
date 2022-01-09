@@ -52,3 +52,14 @@ export interface VerifyStats {
 	invalid: number;
 	duplicate: number;
 }
+
+// /user/profile (Bird-ID)
+export interface BirdIDProfile {
+	avatar_hash: string;
+	avatar_url: string;
+	username: string;
+	discriminator: string;
+	score: number;
+	max_streak: number;
+	missed: [string, number][];
+}
