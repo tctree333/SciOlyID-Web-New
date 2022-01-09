@@ -10,7 +10,8 @@
 			config.bots[params.bot][url.pathname.split('/')[2]]
 		) {
 			return {
-				status: 200
+				status: 200,
+				props: { botUrl: config.bots[params.bot].baseUrl }
 			};
 		} else {
 			return {
@@ -23,8 +24,16 @@
 
 <script lang="ts">
 	import Notifications from 'svelte-notifications';
+	import { setContext } from 'svelte';
+	import Nav from '$lib/components/Nav.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+
+	export let botUrl: string;
+	setContext('botUrl', botUrl);
 </script>
 
+<Nav />
 <Notifications>
 	<slot />
 </Notifications>
+<Footer />

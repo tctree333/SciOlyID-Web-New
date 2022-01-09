@@ -1,5 +1,6 @@
 <script lang="ts">
 	import config from '$lib/config';
+	import UserButton from './UserButton.svelte';
 </script>
 
 <nav>
@@ -21,5 +22,6 @@
 				</ul>
 			</li>
 		{/each}
+		<li><UserButton /></li>
 	</ul>
 </nav>
