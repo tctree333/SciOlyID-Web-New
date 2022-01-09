@@ -6,7 +6,8 @@ export default {
 			upload: false,
 			verify: true,
 			counts: true,
-			practice: false
+			practice: false,
+			attribution: true
 		}
 	},
 	apiPaths: {
@@ -17,5 +18,5 @@ export default {
 		logout: '/user/logout',
 		profile: '/user/profile'
 	},
-	sitePaths: ['upload', 'verify', 'counts', 'practice'] as Readonly<string[]>
+	sitePaths: ['upload', 'verify', 'counts', 'practice', 'attribution'] as Readonly<string[]>
 } as const;

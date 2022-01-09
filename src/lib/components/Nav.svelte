@@ -1,0 +1,25 @@
+<script lang="ts">
+	import config from '$lib/config';
+</script>
+
+<nav>
+	<ul>
+		<li><a href="/">SciOlyID</a></li>
+		<li><a href="/about/">About</a></li>
+		<li><a href="/guides/">Guides</a></li>
+		{#each Object.keys(config.bots) as bot}
+			<li>
+				<ul>
+					<span>{bot.charAt(0).toUpperCase() + bot.substring(1)}</span>
+					{#each config.sitePaths as path}
+						{#if config.bots[bot][path]}
+							<li>
+								<a href="/{bot}/{path}/">{path.charAt(0).toUpperCase() + path.substring(1)}</a>
+							</li>
+						{/if}
+					{/each}
+				</ul>
+			</li>
+		{/each}
+	</ul>
+</nav>
