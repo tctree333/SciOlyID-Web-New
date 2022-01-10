@@ -37,7 +37,7 @@
 	title="Image Attributions: Minerobo | SciOlyID"
 	description="Image credits and attribution for Rocks and Minerals"
 />
-<main class="prose prose-lg md:prose-xl mx-auto px-8 mt-36 mb-24 prose-stone">
+<main class="prose-content">
 	<h1>Image Attributions: Minerobo</h1>
 
 	<ul>

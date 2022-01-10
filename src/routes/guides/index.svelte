@@ -24,7 +24,7 @@
 	export let docs: { title: string; description: string; order: number; path: string }[];
 </script>
 
-<main class="prose prose-lg md:prose-xl mx-auto px-8 mt-36 mb-24 prose-stone">
+<main class="prose-content">
 	<h1>SciOlyID Guides</h1>
 	<nav>
 		<ol>

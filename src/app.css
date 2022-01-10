@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.prose-content {
+		@apply prose prose-lg md:prose-xl mx-auto px-8 mt-36 mb-24 prose-stone;
+	}
+}
