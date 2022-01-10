@@ -72,7 +72,7 @@
 					/>
 				</svg>{/if}</button
 		>
-		<a sveltekit:prefetch href="/" class="text-3xl md:z-auto z-10">SciOlyID</a>
+		<a sveltekit:prefetch href="/" class="text-3xl md:z-auto z-10 font-semibold">SciOlyID</a>
 		<span class="links flex md:space-x-8 space-y-4 md:space-y-0 md:z-auto z-0 underline">
 			<a sveltekit:prefetch href="/about/">About</a>
 			<a sveltekit:prefetch href="/guides/">Guides</a>
