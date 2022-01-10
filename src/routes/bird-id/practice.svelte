@@ -172,77 +172,87 @@
 
 <Head title="Web Practice: Bird-ID | SciOlyID" description="" />
 
-<main>
-	<h1>Web Practice: Bird-ID</h1>
+<main class="prose-content max-w-none">
+	<h1 class="text-center">Web Practice: Bird-ID</h1>
+	<div class="not-prose flex flex-wrap p-5 mb-48 max-w-full">
+		<div class="flex-1 max-w-full">
+			<div class="h-14 max-w-full mx-auto w-[720px]">
+				{#if answered}
+					<p>
+						<strong>You were {answered.status}!</strong><br />The correct answer was {answered.answer}
+						(<em>{answered.sciname}</em>)
+						<a href={answered.wiki} target="_blank" rel="noopener">Wiki</a>
+					</p>
+				{/if}
+				{#if loading}
+					<p>Fetching new bird...</p>
+				{/if}
+				{#if statusMessage}
+					<p>{statusMessage}</p>
+				{/if}
+			</div>
+			<div class="h-[50vh] grid place-items-center">
+				{#if media.media === 'images'}
+					<img
+						class="w-auto max-w-full max-h-[48vh] block border-2 border-slate-500"
+						src={mediaUrl}
+						alt="Bird to identify"
+						on:error={() => {
+							loading = false;
+							alertUser('Trial Maxed! Log in to continue.');
+							media.media = undefined;
+							media = media;
+						}}
+						on:load={() => {
+							loading = false;
+						}}
+					/>
+				{:else if media.media === 'songs'}
+					<audio
+						src={mediaUrl}
+						controls
+						on:error={() => {
+							loading = false;
+							alertUser('Trial Maxed! Log in to continue.');
+							media.media = undefined;
+							media = media;
+						}}
+						on:canplaythrough={() => {
+							loading = false;
+						}}>Your browser does not support audio.</audio
+					>
+				{/if}
+			</div>
 
-	<div>
-		<div>
-			{#if answered}
-				<p>
-					<strong>You were {answered.status}!</strong><br />The correct answer was {answered.answer}
-					(<em>{answered.sciname}</em>)
-					<a href={answered.wiki} target="_blank" rel="noopener">Wiki</a>
-				</p>
-			{/if}
-			{#if loading}
-				<p>Fetching new bird...</p>
-			{/if}
-			{#if statusMessage}
-				<p>{statusMessage}</p>
-			{/if}
-		</div>
-		<div>
-			{#if media.media === 'images'}
-				<img
-					src={mediaUrl}
-					alt="Bird to identify"
-					on:error={() => {
-						loading = false;
-						alertUser('Trial Maxed! Log in to continue.');
-						media.media = undefined;
-						media = media;
-					}}
-					on:load={() => {
-						loading = false;
-					}}
-				/>
-			{:else if media.media === 'songs'}
-				<audio
-					src={mediaUrl}
-					controls
-					on:error={() => {
-						loading = false;
-						alertUser('Trial Maxed! Log in to continue.');
-						media.media = undefined;
-						media = media;
-					}}
-					on:canplaythrough={() => {
-						loading = false;
-					}}>Your browser does not support audio.</audio
+			<input
+				type="text"
+				bind:value={guess}
+				on:keypress={handleEnterKey}
+				class="block max-w-full w-[720px] text-2xl p-3 my-2 mx-auto rounded-md bg-transparent border-2 border-stone-500"
+			/>
+			<div class="flex w-full justify-center items-center flex-wrap space-x-4 mt-6">
+				<button class="btn my-2" on:click={check}>Check</button>
+				<button class="btn my-2" on:click={setMedia}> Refresh </button>
+				<button class="btn my-2" on:click={skip}>Skip</button>
+				<button class="btn my-2" on:click={hint}>Hint</button>
+				<button
+					class="btn my-2"
+					on:click={() => {
+						showOptions = !showOptions;
+					}}>Options</button
 				>
-			{/if}
-		</div>
+			</div>
 
-		<input type="text" bind:value={guess} on:keypress={handleEnterKey} />
-		<div>
-			<button on:click={check}>Check</button>
-			<button on:click={setMedia}> Refresh </button>
-			<button on:click={skip}>Skip</button>
-			<button on:click={hint}>Hint</button>
-			<button
-				on:click={() => {
-					showOptions = !showOptions;
-				}}>Options</button
-			>
-		</div>
-		<div>
 			{#if showOptions}
-				<form>
-					<h2>Options</h2>
+				<form
+					class="mx-auto text-lg ring-2 ring-stone-700 max-w-fit rounded-md p-6 mt-12 space-y-2"
+				>
+					<h2 class="text-xl font-medium">Options</h2>
 					<div>
 						<span>Media Type:</span>
 						<select
 							name="mediaType"
+							class="rounded bg-transparent py-1 pl-2 pr-8"
 							bind:value={media.media}
 							on:change={() => {
 								media = media;
@@ -255,47 +265,57 @@
 					<!--<h4>Black and White (for images)</h4>-->
 					{#if media.media === 'images'}
 						<div>
-							<input type="checkbox" name="bw" bind:checked={media.bw} /> Black and white?
+							<input
+								type="checkbox"
+								name="bw"
+								bind:checked={media.bw}
+								class="rounded bg-transparent w-6 h-6 align-text-top"
+							/> Black and white?
 						</div>
 						<div>
 							<span>Addons:</span>
-							<select name="addons" bind:value={media.addon}>
+							<select
+								name="addons"
+								bind:value={media.addon}
+								class="rounded bg-transparent py-1 pl-2 pr-8"
+							>
 								<option value="">None</option>
 								<option value="female">Female</option>
 								<option value="juvenile">Juvenile</option>
 							</select>
 						</div>
 					{/if}
+					<button
+						class="btn"
+						on:click={() => {
+							showOptions = false;
+						}}>Done!</button
+					>
 				</form>
-				<button
-					on:click={() => {
-						showOptions = false;
-					}}>Done!</button
-				>
 			{/if}
 		</div>
-	</div>
-	<div>
-		<h2>Session Stats:</h2>
-		<p>
-			{stats.correct} Correct Birds ({Math.round((stats.correct / stats.total || 0) * 100)}%)
-		</p>
-		<p>{stats.total} Total Birds</p>
-		<p>{stats.streak} in a row</p>
-		<h2>Personal Stats:</h2>
-		{#if loggedIn}
+		<div class="text-xl mt-12 min-w-max w-[30vw] space-y-3">
+			<h2 class="text-2xl font-medium">Session Stats:</h2>
 			<p>
-				{personalStats.correct} Correct Birds
+				{stats.correct} Correct Birds ({Math.round((stats.correct / stats.total || 0) * 100)}%)
 			</p>
-			<p>Max Streak: {personalStats.maxStreak}</p>
-			<p>Top Missed Birds:</p>
-			<ol>
-				{#each personalStats.missed as [bird, count]}
-					<li>{bird} ({count})</li>
-				{/each}
-			</ol>
-		{:else}
-			<p>Log in to save your score and view full stats!</p>
-		{/if}
+			<p>{stats.total} Total Birds</p>
+			<p>{stats.streak} in a row</p>
+			<h2 class="text-2xl pt-8 font-medium">Personal Stats:</h2>
+			{#if loggedIn}
+				<p>
+					{personalStats.correct} Correct Birds
+				</p>
+				<p>Max Streak: {personalStats.maxStreak}</p>
+				<p>Top Missed Birds:</p>
+				<ol>
+					{#each personalStats.missed as [bird, count]}
+						<li>{bird} ({count})</li>
+					{/each}
+				</ol>
+			{:else}
+				<p>Log in to save your score and view full stats!</p>
+			{/if}
+		</div>
 	</div>
 </main>
