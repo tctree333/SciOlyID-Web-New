@@ -23,4 +23,52 @@
 	.btn:disabled {
 		@apply opacity-50 cursor-not-allowed;
 	}
+
+	.btn-green {
+		@apply text-green-900 bg-green-400;
+	}
+
+	.btn-green:hover {
+		@apply bg-green-300;
+	}
+
+	.btn-green:disabled {
+		@apply bg-green-400;
+	}
+
+	.btn-gray {
+		@apply text-gray-900 bg-gray-500;
+	}
+
+	.btn-gray:hover {
+		@apply bg-gray-400;
+	}
+
+	.btn-gray:disabled {
+		@apply bg-gray-300;
+	}
+
+	.btn-red {
+		@apply text-red-900 bg-red-400;
+	}
+
+	.btn-red:hover {
+		@apply bg-red-300;
+	}
+
+	.btn-red:disabled {
+		@apply bg-red-400;
+	}
+
+	.btn-yellow {
+		@apply text-yellow-900 bg-yellow-400;
+	}
+
+	.btn-yellow:hover {
+		@apply bg-yellow-300;
+	}
+
+	.btn-yellow:disabled {
+		@apply bg-yellow-400;
+	}
 }
