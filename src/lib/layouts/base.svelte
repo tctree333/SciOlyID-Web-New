@@ -1,5 +1,6 @@
 <script>
 	import Head from '$lib/components/Head.svelte';
+	import '$lib/prism-themes/prism-shades-of-purple.css';
 
 	export let title;
 	export let description;
