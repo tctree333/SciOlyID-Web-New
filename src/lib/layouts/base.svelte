@@ -7,4 +7,6 @@
 
 <Head {title} {description} />
 
-<slot />
+<main class="prose prose-lg md:prose-xl mx-auto px-8 mt-36 mb-24 prose-stone">
+	<slot />
+</main>
