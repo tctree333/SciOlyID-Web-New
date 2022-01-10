@@ -37,14 +37,15 @@
 	title="Image Attributions: Minerobo | SciOlyID"
 	description="Image credits and attribution for Rocks and Minerals"
 />
+<main class="prose prose-lg md:prose-xl mx-auto px-8 mt-36 mb-24 prose-stone">
+	<h1>Image Attributions: Minerobo</h1>
 
-<h1>Image Attributions: Minerobo</h1>
-
-<ul>
-	<li>
-		Images from <a href="https://www.minerals.net">Minerals.net</a> are licensed for educational use.
-	</li>
-	{#each renderedAttribs as attrib}
-		<li>{@html attrib}</li>
-	{/each}
-</ul>
+	<ul>
+		<li>
+			Images from <a href="https://www.minerals.net">Minerals.net</a> are licensed for educational use.
+		</li>
+		{#each renderedAttribs as attrib}
+			<li>{@html attrib}</li>
+		{/each}
+	</ul>
+</main>
