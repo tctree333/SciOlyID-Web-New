@@ -1,14 +1,5 @@
-<footer class="text-gray-200 bg-indigo-900">
-	<div class="pt-4 pb-2">
-		<ul
-			class="flex flex-wrap items-center justify-center w-full px-6 py-3 text-xl text-white text-bold"
-		>
-			<li class="mx-4 hover:underline">
-				<a sveltekit:prefetch href="/source/">Open Source</a>
-			</li>
-		</ul>
-	</div>
-	<div class="flex items-center justify-center w-full pt-4 pb-8">
+<footer class="text-stone-100 bg-stone-800">
+	<div class="flex items-center justify-center w-full py-12 text-lg">
 		<p>SciOlyID</p>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

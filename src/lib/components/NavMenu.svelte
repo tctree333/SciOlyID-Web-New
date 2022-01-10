@@ -31,7 +31,7 @@
 		style="--opacity: {$opacity};"
 		class="md:list-none list-disc ml-8 md:ml-0 space-y-1 underline {show
 			? 'md:block'
-			: 'md:hidden'} md:absolute md:bg-slate-200 md:mt-2 md:p-4 md:rounded-sm opacity-100"
+			: 'md:hidden'} md:absolute md:bg-stone-200 md:mt-2 md:p-4 md:rounded-md opacity-100"
 	>
 		<slot />
 	</ul>
