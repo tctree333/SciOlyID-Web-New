@@ -2,6 +2,7 @@
 	import config from '$lib/config';
 	import Head from '$lib/components/Head.svelte';
 	import { getNotificationsContext } from 'svelte-notifications';
+	import type { BirdIDProfile } from '$lib/apiTypes';
 
 	let baseUrl = config.bots['bird-id'].baseUrl;
 	const practiceUrls = {
@@ -15,6 +16,7 @@
 	let showOptions = false;
 	let loading = true;
 	let complete = false;
+	let loggedIn = false;
 	let answered: {
 		guess: string;
 		status: 'correct' | 'incorrect';
@@ -32,6 +34,7 @@
 		total: 0,
 		streak: 0
 	};
+	let personalStats: { correct: number; maxStreak: number; missed: [string, number][] };
 
 	let media: {
 		media: 'images' | 'songs';
@@ -51,7 +54,10 @@
 	}
 
 	const { addNotification } = getNotificationsContext();
-	function alertUser(message: string, type: 'success' | 'danger' | 'warning' = 'danger') {
+	function alertUser(
+		message: string,
+		type: 'success' | 'danger' | 'warning' | 'default' = 'danger'
+	) {
 		addNotification({
 			text: message,
 			position: 'bottom-right',
@@ -92,6 +98,10 @@
 	}
 
 	function check() {
+		if (guess === '') {
+			alertUser('Please enter a guess!', 'default');
+			return;
+		}
 		statusMessage = 'Checking...';
 		getRequest(practiceUrls.check, { guess: guess }).then((data) => {
 			if (!data) {
@@ -102,6 +112,7 @@
 			if (data.status === 'correct') {
 				stats.correct++;
 				stats.streak++;
+				updatePersonalStats();
 			} else {
 				stats.streak = 0;
 			}
@@ -142,6 +153,21 @@
 			}
 		}
 	}
+
+	function updatePersonalStats() {
+		getRequest(baseUrl + config.apiPaths.profile, {}).then((data: BirdIDProfile) => {
+			if (data) {
+				loggedIn = true;
+				data.missed.sort((a, b) => b[1] - a[1]);
+				personalStats = {
+					correct: data.score,
+					maxStreak: data.max_streak,
+					missed: data.missed.filter((bird) => bird[1] > 0)
+				};
+			}
+		});
+	}
+	updatePersonalStats();
 </script>
 
 <Head title="Web Practice: Bird-ID | SciOlyID" description="" />
@@ -250,11 +276,26 @@
 		</div>
 	</div>
 	<div>
-		<h2>Stats:</h2>
+		<h2>Session Stats:</h2>
 		<p>
 			{stats.correct} Correct Birds ({Math.round((stats.correct / stats.total || 0) * 100)}%)
 		</p>
 		<p>{stats.total} Total Birds</p>
 		<p>{stats.streak} in a row</p>
+		<h2>Personal Stats:</h2>
+		{#if loggedIn}
+			<p>
+				{personalStats.correct} Correct Birds
+			</p>
+			<p>Max Streak: {personalStats.maxStreak}</p>
+			<p>Top Missed Birds:</p>
+			<ol>
+				{#each personalStats.missed as [bird, count]}
+					<li>{bird} ({count})</li>
+				{/each}
+			</ol>
+		{:else}
+			<p>Log in to save your score and view full stats!</p>
+		{/if}
 	</div>
 </main>
