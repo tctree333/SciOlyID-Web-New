@@ -7,4 +7,20 @@
 	.prose-content {
 		@apply prose prose-lg md:prose-xl mx-auto px-8 mt-36 mb-24 prose-stone;
 	}
+
+	.main {
+		@apply mx-auto px-8 mt-36 mb-24;
+	}
+
+	.prose-width {
+		@apply max-w-prose text-lg md:text-xl;
+	}
+
+	.btn {
+		@apply rounded-md px-4 py-1 bg-stone-200;
+	}
+
+	.btn:disabled {
+		@apply opacity-50 cursor-not-allowed;
+	}
 }

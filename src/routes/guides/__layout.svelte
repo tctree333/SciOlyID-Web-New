@@ -69,7 +69,7 @@
 
 <slot />
 
-<div class="flex flex-row justify-between w-full max-w-prose mx-auto mb-16 text-lg md:text-xl px-8">
+<div class="flex flex-row justify-between w-full prose-width mx-auto mb-16 px-8">
 	{#each [prevPage, nextPage] as adjPage}
 		{#if adjPage}
 			<a
