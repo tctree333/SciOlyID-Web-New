@@ -67,16 +67,6 @@
 	}
 </script>
 
-<nav>
-	<ol>
-		{#each docs as { title, path }}
-			<li>
-				<a sveltekit:prefetch href={path}>{title}</a>
-			</li>
-		{/each}
-	</ol>
-</nav>
-
 <slot />
 
 <div class="flex flex-row justify-between w-full max-w-prose mx-auto mb-16 text-lg md:text-xl px-8">
