@@ -32,3 +32,8 @@ Previously, SciOlyID was funded by user donations. For the 2022 season, we are p
 ## Open Source
 
 SciOlyID is entirely free and open-source. [Find out what SciOlyID runs on and where the source code can be found](/open-source/).
+
+## Attribution
+
+- Bird illustrations created by pch.vector from freekpik.com
+- Hero illustration by Icons 8 from Ouch!
