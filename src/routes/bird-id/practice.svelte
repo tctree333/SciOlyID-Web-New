@@ -294,7 +294,7 @@
 				</form>
 			{/if}
 		</div>
-		<div class="text-xl mt-12 min-w-max w-[30vw] space-y-3">
+		<div class="text-xl mt-12 min-w-fit w-[30vw] space-y-3">
 			<h2 class="text-2xl font-medium">Session Stats:</h2>
 			<p>
 				{stats.correct} Correct Birds ({Math.round((stats.correct / stats.total || 0) * 100)}%)
