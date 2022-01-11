@@ -42,4 +42,6 @@
 			</div>
 		</div>
 	{/if}
+{:else}
+	<div class="w-6 md:w-28" />
 {/if}

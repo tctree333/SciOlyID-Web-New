@@ -31,7 +31,7 @@
 	}} />
 
 <nav
-	class="lg:px-12 lg:py-8 py-6 px-8 text-xl fixed top-0 inset-x-0 bg-stone-100 bg-opacity-90 isolate z-50"
+	class="lg:px-12 lg:py-8 py-6 px-8 text-lg lg:text-xl fixed top-0 inset-x-0 bg-stone-100 bg-opacity-90 isolate z-50"
 	class:opened={showMenu}
 >
 	<div class="flex justify-between max-w-7xl mx-auto items-center">
@@ -74,7 +74,7 @@
 		>
 		<a sveltekit:prefetch href="/" class="text-3xl md:z-auto z-10 font-semibold">SciOlyID</a>
 		<span
-			class="links flex md:space-x-8 space-y-4 md:space-y-0 md:z-auto z-0 underline md:bg-transparent bg-stone-100 bg-opacity-95"
+			class="links flex md:space-x-4 lg:space-x-8 space-y-4 md:space-y-0 md:z-auto z-0 underline md:bg-transparent bg-stone-100 bg-opacity-95"
 		>
 			<a sveltekit:prefetch href="/about/">About</a>
 			<a sveltekit:prefetch href="/guides/">Guides</a>
