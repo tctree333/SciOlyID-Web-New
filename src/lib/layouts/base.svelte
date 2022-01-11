@@ -8,6 +8,8 @@
 
 <Head {title} {description} />
 
-<main class="prose-content">
-	<slot />
-</main>
+<div class="overflow-x-hidden w-full">
+	<main class="prose-content relative">
+		<slot />
+	</main>
+</div>

@@ -6,6 +6,10 @@ description: SciOlyID is a group of Discord bots and associated services dedicat
 <script context="module">
 	export const prerender = true;
 </script>
+<script>
+	import AboutBird from '$lib/components/svg/AboutBird.svelte';
+</script>
+<AboutBird />
 
 # About
 
