@@ -5,11 +5,11 @@
 
 @layer components {
 	.prose-content {
-		@apply prose prose-lg md:prose-xl mx-auto px-8 mt-36 mb-24 prose-stone;
+		@apply prose prose-lg md:prose-xl mx-auto px-8 mt-36 mb-24 prose-stone isolate;
 	}
 
 	.main {
-		@apply mx-auto px-8 mt-36 mb-24;
+		@apply mx-auto px-8 mt-36 mb-24 isolate;
 	}
 
 	.prose-width {

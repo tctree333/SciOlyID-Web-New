@@ -31,7 +31,7 @@
 	}} />
 
 <nav
-	class="md:px-12 md:py-8 py-6 px-8 text-xl fixed top-0 inset-x-0 bg-stone-100 bg-opacity-90"
+	class="md:px-12 md:py-8 py-6 px-8 text-xl fixed top-0 inset-x-0 bg-stone-100 bg-opacity-90 isolate z-50"
 	class:opened={showMenu}
 >
 	<div class="flex justify-between max-w-7xl mx-auto items-center">
@@ -73,7 +73,9 @@
 				</svg>{/if}</button
 		>
 		<a sveltekit:prefetch href="/" class="text-3xl md:z-auto z-10 font-semibold">SciOlyID</a>
-		<span class="links flex md:space-x-8 space-y-4 md:space-y-0 md:z-auto z-0 underline">
+		<span
+			class="links flex md:space-x-8 space-y-4 md:space-y-0 md:z-auto z-0 underline bg-stone-100 bg-opacity-95"
+		>
 			<a sveltekit:prefetch href="/about/">About</a>
 			<a sveltekit:prefetch href="/guides/">Guides</a>
 			{#each Object.entries(config.bots) as [id, bot]}
@@ -109,7 +111,6 @@
 			height: -webkit-fill-available;
 
 			/* then, arrange our links top to bottom */
-			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: flex-start;
@@ -118,8 +119,6 @@
 			margin: 0;
 			padding-left: 7vw;
 			padding-right: 7vw;
-
-			background: hsla(0deg, 100%, 100%, 90%);
 
 			opacity: 0; /* fade out */
 			transform: translateY(-100%); /* move out of view */
