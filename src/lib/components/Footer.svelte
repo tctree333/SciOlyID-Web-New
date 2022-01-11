@@ -1,3 +1,8 @@
+<script>
+	import FooterBird from './svg/FooterBird.svelte';
+</script>
+
+<FooterBird />
 <footer class="text-stone-100 bg-stone-800">
 	<div class="flex items-center justify-center w-full py-12 text-lg">
 		<p>SciOlyID</p>
