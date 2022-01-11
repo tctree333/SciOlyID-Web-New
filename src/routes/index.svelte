@@ -14,7 +14,7 @@
 	description="Practicing specimen identification can be tedious, but it doesn't have to be. Get started with SciOlyID today!"
 />
 
-<main class="main overflow-x-hidden">
+<main class="mt-24 md:mt-32 mb-24 isolate overflow-x-hidden">
 	<Hero title="Get Better At Specimen ID">
 		<svelte:fragment slot="description">
 			<p>

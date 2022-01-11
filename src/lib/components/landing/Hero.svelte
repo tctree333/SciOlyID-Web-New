@@ -2,7 +2,7 @@
 	export let title: string;
 </script>
 
-<section class="w-full py-8 max-w-7xl mx-auto mb-8">
+<section class="w-full py-8 max-w-7xl mx-auto mb-8 px-8">
 	<div class="flex items-center flex-col md:flex-row">
 		<div class="flex-1 md:pl-6 lg:pl-14 md:mr-4 md:min-w-[400px]">
 			<h1 class="font-bold mb-10 leading-tight max-w-lg text-center md:text-left">{title}</h1>
