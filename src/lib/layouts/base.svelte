@@ -8,8 +8,8 @@
 
 <Head {title} {description} />
 
-<div class="prose-content overflow-x-hidden w-full">
-	<main class="relative">
+<div class="overflow-x-hidden w-full mb-24">
+	<main class="prose-content mb-0 relative">
 		<slot />
 	</main>
 </div>
