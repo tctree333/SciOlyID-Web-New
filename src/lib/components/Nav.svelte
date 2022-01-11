@@ -31,7 +31,7 @@
 	}} />
 
 <nav
-	class="lg:px-12 lg:py-8 py-6 px-8 text-lg lg:text-xl fixed top-0 inset-x-0 bg-stone-100 bg-opacity-90 isolate z-50"
+	class="lg:px-12 lg:py-8 py-6 px-8 text-lg lg:text-xl fixed top-0 inset-x-0 bg-stone-100 bg-opacity-90 isolate z-50 w-screen"
 	class:opened={showMenu}
 >
 	<div class="flex justify-between max-w-7xl mx-auto items-center">
