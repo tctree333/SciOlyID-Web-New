@@ -73,10 +73,13 @@
 		</svelte:fragment>
 	</Hero>
 
-	<Section>
-		<h2 slot="title">Discord bots <span>tailor-made</span> for Science Olympiad</h2>
+	<Section wrapperClass="bg-stone-200" contentClass="max-w-4xl mx-auto">
+		<svelte:fragment slot="title"
+			>Discord bots <span class="underline decoration-orange-500 decoration-8">tailor-made</span> for
+			Science Olympiad</svelte:fragment
+		>
 		<svelte:fragment slot="content">
-			<p>
+			<p class="mb-4">
 				SciOlyID was born from a need for a better way to practice identification for Science
 				Olympiad, specifically bird ID for Ornithology. We later expanded to Fossils and Reach for
 				the Stars (now discontinued). Currently, we operate Bird-ID for Ornithology and Minerobo for
@@ -84,7 +87,7 @@
 				addition to state-specific bird lists for Ornithology. It's not just images either!
 				Sound-based identification is available for Ornithology too.
 			</p>
-			<p>
+			<p class="">
 				Since SciOlyID integrates within Discord, we meet students where they're likely to be,
 				making it super easy to get practice wherever they go. We're also working on a web version
 				of SciOlyID, currently available for Bird-ID with a limited feature set.
@@ -93,7 +96,7 @@
 	</Section>
 
 	<Section>
-		<h2 slot="title">Benefits</h2>
+		<svelte:fragment slot="title">Benefits</svelte:fragment>
 		<svelte:fragment slot="content">
 			<Card title="Rapid-Fire Practice">
 				Accelerate your learning process! SciOlyID takes care of finding images for each specimen,
@@ -118,7 +121,7 @@
 		</svelte:fragment>
 	</Section>
 	<Section>
-		<h2 slot="title">Features</h2>
+		<svelte:fragment slot="title">Features</svelte:fragment>
 		<ul slot="content">
 			<li>Bird Song ID Practice (Bird-ID)</li>
 			<li>State-Specific Bird Lists (Bird-ID)</li>
@@ -133,7 +136,7 @@
 		</ul>
 	</Section>
 	<Section>
-		<h2 slot="title">Testimonials</h2>
+		<svelte:fragment slot="title">Testimonials</svelte:fragment>
 		<svelte:fragment slot="content">
 			<figure>
 				<blockquote>
