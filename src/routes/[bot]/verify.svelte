@@ -146,7 +146,7 @@
 />
 
 <main class="main">
-	<div class="prose-content">
+	<div class="prose prose-lg md:prose-xl mx-auto px-8 prose-stone mb-12">
 		<h1 class="text-center">
 			Verify Images: {config.bots[$page.params.bot].botName}
 		</h1>
