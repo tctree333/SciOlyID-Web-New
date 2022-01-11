@@ -6,7 +6,7 @@ export default {
 			baseUrl: 'https://minerobo.sciolyid.org',
 			upload: false,
 			verify: true,
-			counts: true,
+			count: true,
 			practice: false,
 			attribution: true
 		},
@@ -16,7 +16,7 @@ export default {
 			baseUrl: 'https://orni-api.sciolyid.org',
 			upload: false,
 			verify: false,
-			counts: false,
+			count: false,
 			practice: true,
 			attribution: false
 		}
@@ -24,7 +24,7 @@ export default {
 	apiPaths: {
 		items: '/about/list',
 		info: '/about/info',
-		counts: '/about/count',
+		count: '/about/count',
 		login: '/user/login',
 		logout: '/user/logout',
 		profile: '/user/profile'
@@ -32,7 +32,7 @@ export default {
 	sitePaths: {
 		upload: { name: 'Upload Images' },
 		verify: { name: 'Verify Images' },
-		counts: { name: 'Image Counts' },
+		count: { name: 'Image Counts' },
 		practice: { name: 'Web Practice' },
 		attribution: { name: 'Image Attributions' }
 	}

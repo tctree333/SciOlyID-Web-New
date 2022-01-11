@@ -3,7 +3,7 @@
 	import type { Load } from '@sveltejs/kit';
 
 	export const load: Load = async ({ params, fetch }) => {
-		const url = config.bots[params.bot].baseUrl + config.apiPaths.counts;
+		const url = config.bots[params.bot].baseUrl + config.apiPaths.count;
 		const res = await fetch(url);
 
 		if (res.ok) {
