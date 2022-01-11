@@ -162,13 +162,13 @@
 					Image ID: <span class="font-normal">{loading ? '...' : item.id.slice(0, 7)}</span>
 				</p>
 				<div class="flex items-center justify-end">
-					<p class="px-2 mr-2 text-green-800 bg-green-300 rounded-full">
+					<p class="px-2 mr-2 text-green-900 bg-green-300 rounded-full">
 						{loading ? 0 : stats.valid}
 					</p>
-					<p class="px-2 mr-2 text-yellow-800 bg-yellow-300 rounded-full">
+					<p class="px-2 mr-2 text-yellow-900 bg-yellow-300 rounded-full">
 						{loading ? 0 : stats.duplicate}
 					</p>
-					<p class="px-2 mr-2 text-red-800 bg-red-300 rounded-full">
+					<p class="px-2 mr-2 text-red-900 bg-red-300 rounded-full">
 						{loading ? 0 : stats.invalid}
 					</p>
 				</div>
@@ -186,9 +186,13 @@
 					<div
 						class="p-4 pt-2 mx-auto my-4 mb-2 bg-orange-200 border-t-4 border-yellow-700 rounded"
 					>
-						<p>Possible Duplicates:</p>
+						<p class="mt-4 mb-6 text-2xl font-medium">Possible Duplicates:</p>
 						{#each item.duplicates as duplicate}
-							<img src={duplicate} alt="a possible duplicate" />
+							<img
+								class="mx-auto mt-2 mb-4 rounded max-h-72 block"
+								src={duplicate}
+								alt="a possible duplicate"
+							/>
 						{/each}
 					</div>
 				{/if}
@@ -233,7 +237,7 @@
 			</div>
 		</div>
 	{:else}
-		<p>No images to verify!</p>
+		<p class="text-center text-2xl font-semibold">No images to verify!</p>
 	{/if}
 
 	<div
