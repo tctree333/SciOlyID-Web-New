@@ -30,7 +30,7 @@
 	{:else}
 		<div class="group">
 			<div class="flex items-center justify-end md:px-3 md:py-1">
-				<p class="hidden mr-4 md:block">{profile.username}</p>
+				<p class="hidden mr-4 lg:block">{profile.username}</p>
 				<img class="h-10 rounded-full sm:h-12" alt="profile" src={profile.avatar} />
 			</div>
 			<div

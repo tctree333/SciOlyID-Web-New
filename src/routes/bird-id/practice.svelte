@@ -176,12 +176,12 @@
 	<h1 class="text-center">Web Practice: Bird-ID</h1>
 	<div class="not-prose flex flex-wrap p-5 mb-48 max-w-full">
 		<div class="flex-1 max-w-full">
-			<div class="h-14 max-w-full mx-auto w-[720px]">
+			<div class="h-24 max-w-full mx-auto w-[720px] leading-snug space-y-2">
 				{#if answered}
 					<p>
 						<strong>You were {answered.status}!</strong><br />The correct answer was {answered.answer}
-						(<em>{answered.sciname}</em>)
-						<a href={answered.wiki} target="_blank" rel="noopener">Wiki</a>
+						<em>({answered.sciname})</em>.
+						<a class="underline" href={answered.wiki} target="_blank" rel="noopener">Wiki</a>
 					</p>
 				{/if}
 				{#if loading}
@@ -228,9 +228,9 @@
 				type="text"
 				bind:value={guess}
 				on:keypress={handleEnterKey}
-				class="block max-w-full w-[720px] text-2xl p-3 my-2 mx-auto rounded-md bg-transparent border-2 border-stone-500"
+				class="block max-w-full w-[720px] text-2xl p-3 my-4 mx-auto rounded-md bg-transparent border-2 border-stone-500"
 			/>
-			<div class="flex w-full justify-center items-center flex-wrap space-x-4 mt-6">
+			<div class="flex w-full justify-center items-center flex-wrap space-x-4">
 				<button class="btn my-2" on:click={check}>Check</button>
 				<button class="btn my-2" on:click={setMedia}> Refresh </button>
 				<button class="btn my-2" on:click={skip}>Skip</button>
@@ -308,7 +308,7 @@
 				</p>
 				<p>Max Streak: {personalStats.maxStreak}</p>
 				<p>Top Missed Birds:</p>
-				<ol>
+				<ol class="list-decimal text-lg pl-6">
 					{#each personalStats.missed as [bird, count]}
 						<li>{bird} ({count})</li>
 					{/each}
