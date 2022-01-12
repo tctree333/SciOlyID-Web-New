@@ -193,7 +193,7 @@
 			</Card>
 		</svelte:fragment>
 	</Section>
-	<Section>
+	<Section wrapperClass="pb-8">
 		<svelte:fragment slot="title">Features</svelte:fragment>
 		<ul slot="content" class="flex flex-wrap items-center justify-center max-w-6xl mx-auto w-full">
 			<li class="feature">
