@@ -235,15 +235,13 @@
 				>
 					<img
 						src={testimonial.profile}
-						height="64"
-						width="64"
 						alt="{testimonial.name}'s profile"
-						class="rounded-full"
+						class="h-24 w-auto mx-auto block"
 					/>
 					<blockquote class="mt-4 mb-2 font-medium">
 						{testimonial.content}
 					</blockquote>
-					<figcaption class="font-light">
+					<figcaption class="text-stone-600">
 						<p>
 							{testimonial.name}
 						</p>
