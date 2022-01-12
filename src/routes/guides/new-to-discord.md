@@ -9,3 +9,7 @@ order: 10
 </script>
 
 # New to Discord?
+
+We are currently working on improving our documentation. Please check back in later!
+
+![an illustration of two people building a house](/illustrations/construction.svg)
