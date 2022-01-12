@@ -95,28 +95,99 @@
 		</svelte:fragment>
 	</Section>
 
-	<Section>
+	<Section
+		wrapperClass="bg-stone-200 mb-36"
+		contentClass="flex flex-wrap justify-center items-stretch -mb-36"
+	>
 		<svelte:fragment slot="title">Benefits</svelte:fragment>
 		<svelte:fragment slot="content">
 			<Card title="Rapid-Fire Practice">
-				Accelerate your learning process! SciOlyID takes care of finding images for each specimen,
-				pulling from a vast database with thousands of photos. Put down the flashcards and start
-				training with a wider variety of pictures instead.
+				<svg
+					slot="icon"
+					xmlns="http://www.w3.org/2000/svg"
+					width="48"
+					height="48"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M13 10V3L4 14h7v7l9-11h-7z"
+					/>
+				</svg>
+				Accelerate your learning process! SciOlyID takes care of finding images for each specimen, pulling
+				from a vast database with thousands of photos. Put down the flashcards and start training with
+				a wider variety of pictures instead.
 			</Card>
 			<Card title="Fun and Engaging">
+				<svg
+					slot="icon"
+					xmlns="http://www.w3.org/2000/svg"
+					width="48"
+					height="48"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+					/>
+				</svg>
 				SciOlyID gamifies studying, making ID practice enjoyable and exciting. Compete with students
-				across the country for a spot on the global leaderboard, or start an ID race with your
-				friends to see who has the sharper skills (or is just better at typing).
+				across the country for a spot on the global leaderboard, or start an ID race with your friends
+				to see who has the sharper skills (or is just better at typing).
 			</Card>
 			<Card title="Personalized Studying">
-				Keep track of commonly missed IDs with our personal stats to see what needs work. SciOlyID
-				also supports customized study sessions where you can choose a specific group of specimens
-				to practice. Make ID practice more effective with SciOlyID!
+				<svg
+					slot="icon"
+					xmlns="http://www.w3.org/2000/svg"
+					width="48"
+					height="48"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path d="M12 14l9-5-9-5-9 5 9 5z" />
+					<path
+						d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+					/>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+					/>
+				</svg>
+				Keep track of commonly missed IDs with our personal stats to see what needs work. SciOlyID also
+				supports customized study sessions where you can choose a specific group of specimens to practice.
+				Make ID practice more effective with SciOlyID!
 			</Card>
 			<Card title="Collaborative Community">
-				By being within Discord, a community is already at your fingertips! Set up a team server to
-				encourage each other, share ID tips, or engage in friendly competition. You can also join
-				our support server, a group of peers that share a passion for Science Olympiad.
+				<svg
+					slot="icon"
+					xmlns="http://www.w3.org/2000/svg"
+					width="48"
+					height="48"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+					/>
+				</svg>
+				By being within Discord, a community is already at your fingertips! Set up a team server to encourage
+				each other, share ID tips, or engage in friendly competition. Or join our support server, a group
+				of peers that share a passion for Science Olympiad.
 			</Card>
 		</svelte:fragment>
 	</Section>
