@@ -246,7 +246,12 @@
 						{testimonial.content}
 					</blockquote>
 					<figcaption class="font-light">
-						&mdash; {testimonial.name}, <span class="italic">{testimonial.affiliation}</span>
+						<p>
+							{testimonial.name}
+						</p>
+						<p>
+							{testimonial.affiliation}
+						</p>
 					</figcaption>
 				</figure>
 			{/each}

@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	@font-face {
+		font-family: 'PT Root UI';
+		src: url('/fonts/PT-Root-UI_VF-subset.woff2') format('woff2');
+		font-display: swap;
+	}
+}
+
 @layer components {
 	.prose-content {
 		@apply prose prose-lg md:prose-xl mx-auto px-8 mt-32 mb-24 prose-stone isolate;
