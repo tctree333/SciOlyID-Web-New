@@ -7,6 +7,8 @@
 	import Card from '$lib/components/landing/Card.svelte';
 	import Hero from '$lib/components/landing/Hero.svelte';
 	import Section from '$lib/components/landing/Section.svelte';
+
+	import testimonials from './_testimonials.json';
 </script>
 
 <Head
@@ -27,7 +29,7 @@
 		<svelte:fragment slot="cta">
 			<a
 				href="https://discord.gg/2HbshwGjnm"
-				class="rounded-md px-3 py-2 border-2 border-[#5865F2] flex text-stone-100 items-center max-w-fit bg-[#5865F2] hover:underline my-2"
+				class="rounded-md px-3 py-2 border-2 border-[#5865F2] flex text-stone-100 items-center max-w-fit bg-[#5865F2] hover:shadow-md my-2"
 				><svg
 					width="71"
 					height="55"
@@ -52,7 +54,7 @@
 			<a
 				sveltekit:prefetch
 				href="/guides/getting-started/"
-				class="rounded-md px-3 py-2 flex items-center max-w-fit border-2 border-stone-600 text-stone-700 hover:underline mx-4 my-2"
+				class="rounded-md px-3 py-2 flex items-center max-w-fit border-2 border-stone-600 text-stone-700 hover:shadow-md mx-4 my-2"
 				>Learn More<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="18"
@@ -193,32 +195,63 @@
 	</Section>
 	<Section>
 		<svelte:fragment slot="title">Features</svelte:fragment>
-		<ul slot="content">
-			<li>Bird Song ID Practice (Bird-ID)</li>
-			<li>State-Specific Bird Lists (Bird-ID)</li>
-			<li>Custom Bird List (Bird-ID)</li>
-			<li>Macaulay Content Filters (Bird-ID)</li>
-			<li>ID Races</li>
-			<li>Taxon Groups</li>
-			<li>Score Leaderboards</li>
-			<li>Commonly Missed IDs</li>
-			<li>Study Sessions</li>
-			<li>Black and White Image Filter</li>
+		<ul slot="content" class="flex flex-wrap items-center justify-center max-w-6xl mx-auto w-full">
+			<li class="feature">
+				<a href="/guides/getting-started/">Bird Song ID Practice (Bird-ID)</a>
+			</li>
+			<li class="feature">
+				<a href="/guides/getting-fancy/">State-Specific Bird Lists (Bird-ID)</a>
+			</li>
+			<li class="feature"><a href="/guides/getting-fancy/">Custom Bird List (Bird-ID)</a></li>
+			<li class="feature">
+				<a href="/guides/getting-fancy/">Macaulay Content Filters (Bird-ID)</a>
+			</li>
+			<li class="feature"><a href="/guides/racing/">ID Races</a></li>
+			<li class="feature"><a href="/guides/getting-fancy/">Taxon Groups</a></li>
+			<li class="feature"><a href="/guides/viewing-stats/">Score Leaderboards</a></li>
+			<li class="feature"><a href="/guides/viewing-stats/">Commonly Missed IDs</a></li>
+			<li class="feature"><a href="/guides/sessions/">Study Sessions</a></li>
+			<li class="feature"><a href="/guides/getting-fancy/">Black and White Image Filter</a></li>
+			<li class="feature"><a href="/guides/getting-started/">and more...</a></li>
 		</ul>
 	</Section>
-	<Section>
+	<Section
+		contentClass="flex flex-wrap justify-center items-stretch"
+		wrapperClass="bg-stone-200 pb-8"
+	>
 		<svelte:fragment slot="title">Testimonials</svelte:fragment>
 		<svelte:fragment slot="content">
-			<figure>
-				<blockquote>
-					I love the way SciOlyID is designed to be fun and engaging. I love the way it integrates
-					with Discord, and I love the way it's easy to use. I love the way it supports the latest
-					rulebook, and I love the way it supports state-specific bird lists. I love the way it
-					supports the latest specimen lists, and I love the way it supports the Macaulay Content
-					Filters. I love the way it supports ID
-				</blockquote>
-				<figcaption>&mdash;GitHub Copilot <span>Very Legit University</span></figcaption>
-			</figure>
+			{#each testimonials as testimonial}
+				<figure
+					class="rounded-md shadow-md m-2 p-6 bg-stone-100 max-w-[375px] min-w-[275px] flex-1"
+				>
+					<img
+						src={testimonial.profile}
+						height="64"
+						width="64"
+						alt="{testimonial.name}'s profile"
+						class="rounded-full"
+					/>
+					<blockquote class="mt-4 mb-2 font-medium">
+						{testimonial.content}
+					</blockquote>
+					<figcaption class="font-light">
+						&mdash; {testimonial.name}, <span class="italic">{testimonial.affiliation}</span>
+					</figcaption>
+				</figure>
+			{/each}
 		</svelte:fragment>
 	</Section>
 </main>
+
+<style lang="postcss">
+	.feature {
+		@apply rounded-md shadow-md m-2 font-medium bg-lime-900 text-stone-100;
+	}
+	.feature:hover {
+		@apply underline;
+	}
+	.feature a {
+		@apply block p-6;
+	}
+</style>
