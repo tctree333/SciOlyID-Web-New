@@ -87,6 +87,7 @@
 							</li>
 						{/if}
 					{/each}
+					<li><a href="/{id}/invite">Add to Server</a></li>
 				</NavMenu>
 			{/each}
 		</span>

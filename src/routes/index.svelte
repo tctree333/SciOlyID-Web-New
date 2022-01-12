@@ -47,7 +47,7 @@
 				</svg></a
 			>
 			<a
-				href="https://discord.gg/2HbshwGjnm"
+				href="/server"
 				class="rounded-md px-3 py-2 border-2 border-[#5865F2] flex items-center max-w-fit text-[#3C48C9] hover:shadow-md my-2 mx-4"
 				><svg
 					width="25.8181818"
