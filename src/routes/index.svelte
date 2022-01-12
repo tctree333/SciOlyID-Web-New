@@ -237,7 +237,7 @@
 					<img
 						src={testimonial.profile}
 						alt="{testimonial.name}'s profile"
-						class="h-24 w-auto mx-auto block"
+						class="h-24 w-auto mx-auto block rounded"
 					/>
 					<blockquote class="mt-4 mb-2 font-medium">
 						{testimonial.content}
