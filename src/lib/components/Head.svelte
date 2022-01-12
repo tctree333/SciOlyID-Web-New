@@ -19,8 +19,11 @@
 
 	export let canonical: string | undefined = undefined;
 
+	const url = new URL($page.url);
+	url.host = 'sciolyid.org';
+
 	if (!canonical) {
-		canonical = $page.url.toString();
+		canonical = url.toString();
 	}
 </script>
 
@@ -50,7 +53,7 @@
 
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<meta name="twitter:domain" content={$page.url.host} />
+	<meta name="twitter:domain" content={url.host} />
 	<meta name="twitter:url" content={canonical} />
 
 	{#if pageImage}
