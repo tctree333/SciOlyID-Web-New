@@ -1,6 +1,6 @@
 <svg
 	width="272.33333px"
-	height="187x"
+	height="187px"
 	viewBox="0 0 817 561"
 	version="1.1"
 	xmlns="http://www.w3.org/2000/svg"
