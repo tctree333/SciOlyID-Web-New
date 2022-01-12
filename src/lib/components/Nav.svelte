@@ -74,7 +74,7 @@
 		>
 		<a sveltekit:prefetch href="/" class="text-3xl md:z-auto z-10 font-semibold">SciOlyID</a>
 		<span
-			class="links flex md:space-x-4 lg:space-x-8 space-y-4 md:space-y-0 md:z-auto z-0 underline md:bg-transparent bg-stone-100 bg-opacity-95"
+			class="links flex md:space-x-4 lg:space-x-8 space-y-4 md:space-y-0 md:z-auto z-0 underline md:bg-transparent bg-stone-100"
 		>
 			<a sveltekit:prefetch href="/about/">About</a>
 			<a sveltekit:prefetch href="/guides/">Guides</a>
@@ -96,7 +96,7 @@
 	</div>
 </nav>
 
-<style>
+<style lang="postcss">
 	/* based on https://bholmes.dev/blog/building-a-sexy-mobile-ready-navbar-in-any-web-framework/ */
 	@media (max-width: 767.9px) {
 		/* arbitrary breakpoint, around the size of a tablet */
@@ -123,6 +123,15 @@
 			opacity: 0; /* fade out */
 			transform: translateY(-100%); /* move out of view */
 			transition: transform 0.2s, opacity 0.2s; /* transition these smoothly */
+
+			--tw-bg-opacity: 0.97;
+		}
+
+		@supports (backdrop-filter: blur(5px)) {
+			.links {
+				backdrop-filter: blur(5px);
+				--tw-bg-opacity: 0.85;
+			}
 		}
 
 		nav.opened .links {
