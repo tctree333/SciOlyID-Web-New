@@ -6,8 +6,9 @@
 		webp: string;
 	};
 	export let className = '';
+	export let imgClass = '';
 	export let loading: 'lazy' | 'eager' = 'lazy';
-	export let sizes = '(max-width: 768px) 100vw, 768px';
+	export let sizes = '(max-width:65ch) 100vw, 65ch';
 
 	const { width, height, src } = imageData.metadata;
 </script>
@@ -15,5 +16,5 @@
 <picture class={className}>
 	<source srcset={imageData.webp} type="image/webp" {sizes} />
 	<source srcset={imageData.jpeg} type="image/jpeg" {sizes} />
-	<img {alt} {loading} decoding="async" {width} {height} {src} />
+	<img class={imgClass} {alt} {loading} decoding="async" {width} {height} {src} />
 </picture>
