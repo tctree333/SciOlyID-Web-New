@@ -1,10 +1,10 @@
 <script>
-	import FooterBird from './svg/FooterBird.svelte';
+	import FooterIllustrations from './svg/FooterIllustrations.svelte';
 </script>
 
-<FooterBird />
-<footer class="text-stone-100 bg-stone-800">
-	<div class="flex items-center justify-center w-full py-12 text-lg">
+<footer class="overflow-x-hidden">
+	<FooterIllustrations />
+	<div class="text-stone-100 bg-stone-800 flex items-center justify-center w-full py-12 text-lg">
 		<p>SciOlyID</p>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

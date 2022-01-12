@@ -35,5 +35,7 @@ SciOlyID is entirely free and open-source. [Find out what SciOlyID runs on and w
 
 ## Attribution
 
-- Bird illustrations created by pch.vector from freekpik.com
+- Bird illustrations created by pch.vector from freepik.com
+- Crystal/Rock illustrations created by macrovector from freepik.com
 - Hero illustration by Icons 8 from Ouch!
+- Icons from Heroicons
