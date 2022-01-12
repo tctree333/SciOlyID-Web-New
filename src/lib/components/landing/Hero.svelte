@@ -1,4 +1,9 @@
 <script lang="ts">
+	import Image from '../Image.svelte';
+	import metadata from '$lib/images/hero.png?metadata';
+	import jpeg from '$lib/images/hero.png?w=440;880;550;768;1075&jpeg&srcset';
+	import webp from '$lib/images/hero.png?w=440;880;550;768;1075&webp&srcset';
+
 	export let title: string;
 </script>
 
@@ -15,10 +20,12 @@
 				<slot name="cta" />
 			</span>
 		</div>
-		<img
-			class="block md:w-1/2 md:min-w-[440px] justify-end mt-6 -mr-20 md:m-0 min-w-[373px]"
-			src="/illustrations/hero.png"
+		<Image
 			alt="a 3d model of a student sitting on the ground next to some plants and a pile of books. their hair floats above them with dna, planets, fruit, and other symbols orbiting around the hair."
+			imageData={{ metadata, jpeg, webp }}
+			className="block md:w-1/2 md:min-w-[440px] mt-6 -mr-20 md:m-0 min-w-[373px]"
+			loading="eager"
+			sizes="(max-width:437px) 437px,(max-width: 767px) 100vw,(max-width: 943px) 440px,(max-width:1280px) 50vw, 608px"
 		/>
 	</div>
 </section>
