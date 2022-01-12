@@ -75,7 +75,7 @@
 		</svelte:fragment>
 	</Hero>
 
-	<Section wrapperClass="bg-stone-200" contentClass="max-w-4xl mx-auto">
+	<Section wrapperClass="bg-stone-200" contentClass="max-w-4xl mx-auto" id="science-olympiad">
 		<svelte:fragment slot="title"
 			>Discord bots <span class="underline decoration-orange-500 decoration-8">tailor-made</span> for
 			Science Olympiad</svelte:fragment
@@ -100,6 +100,7 @@
 	<Section
 		wrapperClass="bg-stone-200 mb-36"
 		contentClass="flex flex-wrap justify-center items-stretch -mb-36"
+		id="benefits"
 	>
 		<svelte:fragment slot="title">Benefits</svelte:fragment>
 		<svelte:fragment slot="content">
@@ -193,7 +194,7 @@
 			</Card>
 		</svelte:fragment>
 	</Section>
-	<Section wrapperClass="pb-8">
+	<Section wrapperClass="pb-8" id="features">
 		<svelte:fragment slot="title">Features</svelte:fragment>
 		<ul slot="content" class="flex flex-wrap items-center justify-center max-w-6xl mx-auto w-full">
 			<li class="feature">
@@ -226,6 +227,7 @@
 	<Section
 		contentClass="flex flex-wrap justify-center items-stretch"
 		wrapperClass="bg-stone-200 pb-8"
+		id="testimonials"
 	>
 		<svelte:fragment slot="title">Testimonials</svelte:fragment>
 		<svelte:fragment slot="content">
