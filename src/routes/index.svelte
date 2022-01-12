@@ -197,22 +197,30 @@
 		<svelte:fragment slot="title">Features</svelte:fragment>
 		<ul slot="content" class="flex flex-wrap items-center justify-center max-w-6xl mx-auto w-full">
 			<li class="feature">
-				<a href="/guides/getting-started/">Bird Song ID Practice (Bird-ID)</a>
+				<a sveltekit:prefetch href="/guides/getting-started/">Bird Song ID Practice (Bird-ID)</a>
 			</li>
 			<li class="feature">
-				<a href="/guides/getting-fancy/">State-Specific Bird Lists (Bird-ID)</a>
+				<a sveltekit:prefetch href="/guides/getting-fancy/">State-Specific Bird Lists (Bird-ID)</a>
 			</li>
-			<li class="feature"><a href="/guides/getting-fancy/">Custom Bird List (Bird-ID)</a></li>
 			<li class="feature">
-				<a href="/guides/getting-fancy/">Macaulay Content Filters (Bird-ID)</a>
+				<a sveltekit:prefetch href="/guides/getting-fancy/">Custom Bird List (Bird-ID)</a>
 			</li>
-			<li class="feature"><a href="/guides/racing/">ID Races</a></li>
-			<li class="feature"><a href="/guides/getting-fancy/">Taxon Groups</a></li>
-			<li class="feature"><a href="/guides/viewing-stats/">Score Leaderboards</a></li>
-			<li class="feature"><a href="/guides/viewing-stats/">Commonly Missed IDs</a></li>
-			<li class="feature"><a href="/guides/sessions/">Study Sessions</a></li>
-			<li class="feature"><a href="/guides/getting-fancy/">Black and White Image Filter</a></li>
-			<li class="feature"><a href="/guides/getting-started/">and more...</a></li>
+			<li class="feature">
+				<a sveltekit:prefetch href="/guides/getting-fancy/">Macaulay Content Filters (Bird-ID)</a>
+			</li>
+			<li class="feature"><a sveltekit:prefetch href="/guides/racing/">ID Races</a></li>
+			<li class="feature"><a sveltekit:prefetch href="/guides/getting-fancy/">Taxon Groups</a></li>
+			<li class="feature">
+				<a sveltekit:prefetch href="/guides/viewing-stats/">Score Leaderboards</a>
+			</li>
+			<li class="feature">
+				<a sveltekit:prefetch href="/guides/viewing-stats/">Commonly Missed IDs</a>
+			</li>
+			<li class="feature"><a sveltekit:prefetch href="/guides/sessions/">Study Sessions</a></li>
+			<li class="feature">
+				<a sveltekit:prefetch href="/guides/getting-fancy/">Black and White Image Filter</a>
+			</li>
+			<li class="feature"><a sveltekit:prefetch href="/guides/getting-started/">and more...</a></li>
 		</ul>
 	</Section>
 	<Section
