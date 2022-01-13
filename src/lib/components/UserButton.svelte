@@ -43,5 +43,5 @@
 		</div>
 	{/if}
 {:else}
-	<div class="w-6 md:w-28" />
+	<div class="w-6 lg:w-44" />
 {/if}
