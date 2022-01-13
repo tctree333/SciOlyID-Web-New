@@ -81,7 +81,7 @@
 				height="177.44964"
 				viewBox="0,0,260.92868,177.44964"
 				class="h-8 w-auto hidden mr-3 sm:inline"
-				><g transform="translate(-108.2639,-83.61409)"
+				><title>Logo</title><g transform="translate(-108.2639,-83.61409)"
 					><g
 						fill="none"
 						fill-rule="nonzero"

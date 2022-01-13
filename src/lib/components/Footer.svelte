@@ -12,7 +12,7 @@
 			width="24"
 			height="24"
 			class="inline-block w-4 h-4 mx-2 fill-current"
-			><circle
+			><title>Copyleft</title><circle
 				cx="490"
 				cy="490"
 				r="440"

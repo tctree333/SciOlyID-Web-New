@@ -12,6 +12,7 @@
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 >
+	<title>a reddish pink crystal</title>
 	<!-- svelte-ignore a11y-invalid-attribute -->
 	<a
 		href=""
