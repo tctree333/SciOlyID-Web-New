@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { navigating } from '$app/stores';
 	import { tweened } from 'svelte/motion';
 
 	export let title: string;
@@ -12,6 +13,10 @@
 	$: {
 		show ? ($opacity = 1) : ($opacity = 0);
 	}
+
+	navigating.subscribe(() => {
+		show = false;
+	});
 </script>
 
 <svelte:body
