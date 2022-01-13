@@ -3,7 +3,7 @@
 
 	export const load: Load = async ({ fetch }) => {
 		const url =
-			'https://raw.githubusercontent.com/tctree333/SciOlyID-Web/master/src/_data/minerobo_attributions.json';
+			'https://raw.githubusercontent.com/tctree333/Minerobo/main/image_attributions.json';
 		if (!url) return { status: 404, message: 'Not found' };
 
 		const res = await fetch(url);
