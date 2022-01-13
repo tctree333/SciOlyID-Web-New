@@ -73,7 +73,11 @@
 		media = media;
 	}
 
-	async function getRequest(urlString: string, params: { [key: string]: string }, notifications=true) {
+	async function getRequest(
+		urlString: string,
+		params: { [key: string]: string },
+		notifications = true
+	) {
 		const url = new URL(urlString);
 		url.search = new URLSearchParams(params).toString();
 
@@ -174,8 +178,11 @@
 <Head title="Web Practice: Bird-ID | SciOlyID" description="" plausibleDomain="orni.sciolyid.org" />
 
 <main class="prose-content max-w-none">
-	<h1 class="text-center">Web Practice: Bird-ID</h1>
-	<div class="not-prose flex flex-wrap p-5 mb-48 max-w-full">
+	<h1 class="text-center mb-4">Web Practice: Bird-ID</h1>
+	<p class="text-center">
+		<a href="/guides/web-practice/">Learn more about our web practice interface.</a>
+	</p>
+	<div class="not-prose flex flex-wrap px-5 mb-48 max-w-full">
 		<div class="flex-1 max-w-full">
 			<div class="h-24 max-w-full mx-auto w-[720px] leading-snug space-y-2">
 				{#if answered}
@@ -224,9 +231,10 @@
 					>
 				{/if}
 			</div>
-
+			<label for="guess" class="sr-only">Your answer</label>
 			<input
 				type="text"
+				id="guess"
 				bind:value={guess}
 				on:keypress={handleEnterKey}
 				class="block max-w-full w-[720px] text-2xl p-3 my-4 mx-auto rounded-md bg-transparent border-2 border-stone-500"
@@ -295,7 +303,7 @@
 				</form>
 			{/if}
 		</div>
-		<div class="text-xl mt-12 min-w-fit w-[30vw] space-y-3">
+		<div class="text-xl mt-32 min-w-fit w-[30vw] space-y-3">
 			<h2 class="text-2xl font-medium">Session Stats:</h2>
 			<p>
 				{stats.correct} Correct Birds ({Math.round((stats.correct / stats.total || 0) * 100)}%)
