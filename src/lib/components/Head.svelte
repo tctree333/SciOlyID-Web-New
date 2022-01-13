@@ -26,6 +26,14 @@
 	if (!canonical) {
 		canonical = url.toString();
 	}
+
+	if (!pageImage) {
+		pageImage = {
+			url: '/logo.png',
+			type: 'image/png',
+			alt: 'SciOlyID Logo'
+		};
+	}
 </script>
 
 <svelte:head>
@@ -56,14 +64,16 @@
 
 	{#if pageImage}
 		<meta name="twitter:card" content="summary_large_image" />
-
-		<meta property="og:image" content={pageImage.url} />
-		<meta property="og:image:type" content={pageImage.type} />
-		<meta property="og:image:alt" content={pageImage.alt} />
-
-		<meta name="twitter:image" content={pageImage.url} />
-		<meta name="twitter:image:alt" content={pageImage.alt} />
+	{:else}
+		<meta name="twitter:card" content="summary" />
 	{/if}
+
+	<meta property="og:image" content={pageImage.url} />
+	<meta property="og:image:type" content={pageImage.type} />
+	<meta property="og:image:alt" content={pageImage.alt} />
+
+	<meta name="twitter:image" content={pageImage.url} />
+	<meta name="twitter:image:alt" content={pageImage.alt} />
 
 	<!-- Other assorted tags -->
 	<meta name="twitter:dnt" content="on" />
