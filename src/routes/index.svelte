@@ -101,7 +101,7 @@
 		contentClass="flex flex-wrap justify-center items-stretch -mb-36"
 		id="benefits"
 	>
-		<svelte:fragment slot="title">Benefits</svelte:fragment>
+		<svelte:fragment slot="title">Why SciOlyID?</svelte:fragment>
 		<svelte:fragment slot="content">
 			<Card title="Rapid-Fire Practice">
 				<svg
@@ -228,7 +228,7 @@
 		wrapperClass="bg-stone-200 pb-8"
 		id="testimonials"
 	>
-		<svelte:fragment slot="title">Testimonials</svelte:fragment>
+		<svelte:fragment slot="title">How has SciOlyID helped your team?</svelte:fragment>
 		<svelte:fragment slot="content">
 			{#each testimonials as testimonial}
 				<figure
@@ -258,12 +258,12 @@
 
 <style lang="postcss">
 	.feature {
-		@apply rounded-md shadow-md m-2 font-medium bg-lime-800 text-stone-100;
+		@apply rounded-md shadow-md m-2 font-medium bg-lime-800 text-stone-100 text-lg;
 	}
 	.feature:hover {
 		@apply underline;
 	}
 	.feature a {
-		@apply block p-6;
+		@apply block p-5;
 	}
 </style>
