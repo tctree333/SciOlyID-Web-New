@@ -182,7 +182,7 @@
 					/>
 				</div>
 
-				{#if !loading && item.duplicates}
+				{#if !loading && item.duplicates.length > 0}
 					<div
 						class="p-4 pt-2 mx-auto my-4 mb-2 bg-orange-200 border-t-4 border-yellow-700 rounded"
 					>
