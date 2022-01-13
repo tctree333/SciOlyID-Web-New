@@ -73,7 +73,7 @@
 		media = media;
 	}
 
-	async function getRequest(urlString: string, params: { [key: string]: string }) {
+	async function getRequest(urlString: string, params: { [key: string]: string }, notifications=true) {
 		const url = new URL(urlString);
 		url.search = new URLSearchParams(params).toString();
 
@@ -84,16 +84,16 @@
 
 		const returnedData = await resp.json();
 		if (resp.status === 403) {
-			alertUser('Please log in to continue!');
+			if (notifications) alertUser('Please log in to continue!');
 			return false;
 		} else if (resp.status === 422) {
-			alertUser('An error occurred: ' + returnedData.error);
+			if (notifications) alertUser('An error occurred: ' + returnedData.error);
 			setMedia();
 			return false;
 		} else if (resp.status === 200) {
 			return returnedData;
 		} else {
-			alertUser('Something went wrong...');
+			if (notifications) alertUser('Something went wrong...');
 			return false;
 		}
 	}
@@ -156,7 +156,7 @@
 	}
 
 	function updatePersonalStats() {
-		getRequest(baseUrl + config.apiPaths.profile, {}).then((data: BirdIDProfile) => {
+		getRequest(baseUrl + config.apiPaths.profile, {}, false).then((data: BirdIDProfile) => {
 			if (data) {
 				loggedIn = true;
 				data.missed.sort((a, b) => b[1] - a[1]);
