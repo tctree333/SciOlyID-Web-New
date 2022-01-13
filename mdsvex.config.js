@@ -20,7 +20,8 @@ const config = {
 				behavior: 'wrap',
 				properties: {
 					className: 'no-underline hover:underline'
-				}
+				},
+				test: ['h2', 'h3', 'h4', 'h5', 'h6']
 			}
 		]
 	]
