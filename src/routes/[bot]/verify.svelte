@@ -34,7 +34,7 @@
 	export let baseUrl: string;
 
 	let item: VerifyItemMore;
-	let stats: VerifyStats;
+	let stats: VerifyStats = { valid: 0, invalid: 0, duplicate: 0 };
 
 	let loading = true;
 	let hidden = false;
