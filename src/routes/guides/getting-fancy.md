@@ -1,6 +1,6 @@
 ---
 title: 'Getting Fancy'
-description: 'Learn some more advanced features that SciOlyID offers.'
+description: 'Learn how to use taxon groups, image filters, and alternate lists.'
 order: 30
 ---
 
@@ -9,6 +9,8 @@ order: 30
 </script>
 
 # Getting Fancy: Advanced Features
+
+[Back to all guides](/guides/)
 
 We are currently working on improving our documentation. Please check back in later!
 
