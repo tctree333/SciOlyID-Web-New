@@ -24,7 +24,7 @@
 		if (show && !ev.target.closest('#' + id)) show = false;
 	}} />
 
-<span {id} class="group">
+<span {id}>
 	<button
 		class="hidden md:block"
 		on:click={() => {

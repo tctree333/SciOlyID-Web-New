@@ -1,10 +1,14 @@
 <script lang="ts">
+	import { navigating } from '$app/stores';
+
 	import config from '$lib/config';
 	import { getContext } from 'svelte';
 
 	let botUrl: string | undefined = getContext('botUrl');
 
 	let profile: { username: string; avatar: string };
+
+	let show = false;
 
 	async function updateProfile() {
 		const res = await fetch(botUrl + config.apiPaths.profile, {
@@ -19,7 +23,16 @@
 	if (botUrl) {
 		updateProfile();
 	}
+
+	navigating.subscribe(() => {
+		show = false;
+	});
 </script>
+
+<svelte:body
+	on:click={(ev) => {
+		if (show && !ev.target.closest('#userProfile')) show = false;
+	}} />
 
 {#if botUrl}
 	{#if !profile}
@@ -28,17 +41,19 @@
 			href={botUrl + config.apiPaths.login}>Login</a
 		>
 	{:else}
-		<div class="group">
-			<div class="flex items-center justify-end md:px-3 md:py-1">
+		<div class="relative">
+			<button
+				id="userProfile"
+				class="flex items-center justify-end md:px-3 md:py-1"
+				on:click={() => {
+					show = !show;
+				}}
+			>
 				<p class="hidden mr-4 lg:block">{profile.username}</p>
 				<img class="h-10 rounded-full sm:h-12" alt="profile" src={profile.avatar} />
-			</div>
-			<div
-				class="fixed top-0 right-0 hidden p-4 px-6 mt-16 mr-8 bg-gray-400 rounded shadow-md group-hover:block"
-			>
-				<a class="px-2 py-1 rounded-full shadow btn btn-red" href={botUrl + config.apiPaths.logout}
-					>Logout</a
-				>
+			</button>
+			<div class="absolute p-4 mt-2 bg-stone-200 rounded-md {show ? 'block' : 'hidden'}">
+				<a class="underline" href={botUrl + config.apiPaths.logout}>Logout</a>
 			</div>
 		</div>
 	{/if}
