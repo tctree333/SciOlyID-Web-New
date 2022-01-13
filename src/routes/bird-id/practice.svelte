@@ -3,6 +3,7 @@
 	import Head from '$lib/components/Head.svelte';
 	import { getNotificationsContext } from 'svelte-notifications';
 	import type { BirdIDProfile } from '$lib/apiTypes';
+	import { browser } from '$app/env';
 
 	let baseUrl = config.bots['bird-id'].baseUrl;
 	const practiceUrls = {
@@ -48,7 +49,7 @@
 			bw: media.bw ? '1' : '0',
 			media: media.media,
 			addon: media.addon,
-			time: performance.now().toString()
+			time: browser ? performance.now().toString() : '0'
 		}).toString();
 		mediaUrl = url.toString();
 	}
