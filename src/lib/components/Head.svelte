@@ -21,6 +21,7 @@
 
 	const url = new URL($page.url);
 	url.host = 'sciolyid.org';
+	url.protocol = 'https:';
 
 	if (!canonical) {
 		canonical = url.toString();
@@ -31,6 +32,8 @@
 	<title>{title}</title>
 	<meta name="description" content={description} />
 	<link rel="canonical" href={canonical} />
+
+	<meta name="theme-color" content="#3f6212" />
 
 	<!-- Allow search engines to crawl certain pages -->
 	{#if index === false}
