@@ -14,7 +14,7 @@ order: 70
 
 While we're lucky to have the Macaulay Library for bird images, there isn't a similar resource available for Rocks and Minerals. For Minerobo, we have compiled a source of Creative Commons licensed images from around the internet. Still, some may be mistagged, low quality, or of something completely unrelated.
 
-That's why we depend on the community to help us verify images! Head over to the [image verifications page](/minerobo/verify/) and sign in with your Discord account. You might need to [join our support server](/server) first.
+That's why we depend on the community to help us verify images! Head over to the [image verifications page](/minerobo/verify/) and sign in with your Discord account. You might need to [join our support server](/server/) first.
 
 Instructions for verifying images will be displayed on the image verifications page. Please read them to understand what we're looking for. Skip any images if you're unsure if it's the correct specimen (unless they're obviously unrelated). Stats on how others have marked the image are displayed on the top right.
 

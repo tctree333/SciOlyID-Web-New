@@ -20,10 +20,10 @@ Welcome to SciOlyID! We're so glad you're here and hope that you'll find our bot
 
 ## Accessing the bots
 
-To get started, you'll need access to the bots. You can either [join our support server](/server) or add the bots to an existing server. Add the bots to your server by using the appropriate link below. Keep in mind that you'll need the "Manage Server" permission to add the bots to your server.
+To get started, you'll need access to the bots. You can either [join our support server](/server/) or add the bots to an existing server. Add the bots to your server by using the appropriate link below. Keep in mind that you'll need the "Manage Server" permission to add the bots to your server.
 
-- [Bird-ID](/bird-id/invite)
-- [Minerobo](/minerobo/invite)
+- [Bird-ID](/bird-id/invite/)
+- [Minerobo](/minerobo/invite/)
 
 If you're joining our support server, you'll need to [select your event role](https://discord.com/channels/925214799711858688/925215656377454612/925225513763614773) in the #roles channel to gain access to the appropriate event channels. You'll also gain access to the discussion channels where you can talk about the event, ask for help, or share id tips. Please keep bot usage within channels titled "bot-usage" or "racing".
 
@@ -106,4 +106,4 @@ If you're stuck on a specimen and want a hint, the `hint` command will give you 
 
 Congratulations! You've completed the getting started guide! This should be enough to get you started, but it's just the beginning. SciOlyID can be a potent tool for practicing identification with many features that make it unique. Next, you'll learn about filters, taxon groups, and custom lists.
 
-If you have any suggestions on improving this guide, please join our [support server](/server) and let us know. We'd love to hear your feedback!
+If you have any suggestions on improving this guide, please join our [support server](/server/) and let us know. We'd love to hear your feedback!

@@ -1,9 +1,12 @@
 export default {
+	invite: 'https://discord.gg/2HbshwGjnm',
 	bots: {
 		minerobo: {
 			eventName: 'Rocks and Minerals',
 			botName: 'Minerobo',
 			baseUrl: 'https://minerobo.sciolyid.org',
+			invite:
+				'https://discord.com/api/oauth2/authorize?client_id=821143596232474684&permissions=51200&scope=bot',
 			upload: false,
 			verify: true,
 			count: true,
@@ -14,6 +17,8 @@ export default {
 			eventName: 'Ornithology',
 			botName: 'Bird-ID',
 			baseUrl: 'https://orni-api.sciolyid.org',
+			invite:
+				'https://discord.com/api/oauth2/authorize?client_id=601917808137338900&permissions=268486656&scope=bot',
 			upload: false,
 			verify: false,
 			count: false,

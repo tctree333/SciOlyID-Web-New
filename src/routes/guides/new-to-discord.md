@@ -16,7 +16,7 @@ _This guide is meant for people who are new to Discord and SciOlyID. Users who h
 
 If you're not familiar, [Discord](https://discord.com/) is a communication platform for communities that supports text, voice, and video. Communities can be small, such as a couple of friends, or large, with hundreds of thousands of members worldwide.
 
-Check out [Discord's support page on getting started](https://support.discord.com/hc/en-us/articles/360033931551-Getting-Started) to learn how to create an account. Once you're there, you can join our [support server](/server) and start using SciOlyID!
+Check out [Discord's support page on getting started](https://support.discord.com/hc/en-us/articles/360033931551-Getting-Started) to learn how to create an account. Once you're there, you can join our [support server](/server/) and start using SciOlyID!
 
 You might find these resources helpful:
 
