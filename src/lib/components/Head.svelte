@@ -27,6 +27,7 @@
 		canonical = url.toString();
 	}
 
+	let largeImage = !!pageImage;
 	if (!pageImage) {
 		pageImage = {
 			url: '/logo.png',
@@ -62,7 +63,7 @@
 	<meta name="twitter:domain" content={url.host} />
 	<meta name="twitter:url" content={canonical} />
 
-	{#if pageImage}
+	{#if largeImage}
 		<meta name="twitter:card" content="summary_large_image" />
 	{:else}
 		<meta name="twitter:card" content="summary" />
