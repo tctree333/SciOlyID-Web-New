@@ -39,6 +39,7 @@ export default {
 		verify: { name: 'Verify Images' },
 		count: { name: 'Image Counts' },
 		practice: { name: 'Web Practice' },
-		attribution: { name: 'Image Attributions' }
+		attribution: { name: 'Image Attributions' },
+		invite: { name: 'Add to Server' }
 	}
 } as const;
