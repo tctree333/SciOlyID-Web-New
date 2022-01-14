@@ -18,7 +18,7 @@ Our web practice interface is currently only available for Bird-ID, and has limi
 
 <div class="border-2">
 
-![a screenshot of the web practice interface](/images/web-practice-screenshot.png)
+![a screenshot of the web practice interface](/images/screenshots/web-practice.png)
 
 </div>
 
