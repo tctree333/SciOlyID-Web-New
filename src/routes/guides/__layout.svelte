@@ -24,19 +24,22 @@
 	export let docs: { title: string; description: string; order: number; path: string }[];
 
 	let currentIndex: number;
+
+	let previous = 'Previous' as const;
+	let next = 'Next' as const;
 	let prevPage: {
 		title: string;
 		description: string;
 		order: number;
 		path: string;
-		name: 'Previous Guide';
+		name: typeof previous;
 	};
 	let nextPage: {
 		title: string;
 		description: string;
 		order: number;
 		path: string;
-		name: 'Next Guide';
+		name: typeof next;
 	};
 
 	$: {
@@ -44,22 +47,21 @@
 		prevPage =
 			currentIndex === 0 || currentIndex === -1
 				? null
-				: { ...docs[currentIndex - 1], name: 'Previous Guide' };
+				: { ...docs[currentIndex - 1], name: previous };
 		nextPage =
 			currentIndex === docs.length - 1 || currentIndex === -1
 				? null
-				: { ...docs[currentIndex + 1], name: 'Next Guide' };
+				: { ...docs[currentIndex + 1], name: next };
 	}
 
 	navigating.subscribe(() => {
 		currentIndex = docs.findIndex((d) => d.path === $page.url.pathname);
-		prevPage = currentIndex === 0 ? null : { ...docs[currentIndex - 1], name: 'Previous Guide' };
-		nextPage =
-			currentIndex === docs.length - 1 ? null : { ...docs[currentIndex + 1], name: 'Next Guide' };
+		prevPage = currentIndex === 0 ? null : { ...docs[currentIndex - 1], name: previous };
+		nextPage = currentIndex === docs.length - 1 ? null : { ...docs[currentIndex + 1], name: next };
 	});
 
 	function prevNext(name: string) {
-		if (name === 'Next Guide') {
+		if (name === next) {
 			return `<span>${name.toUpperCase()}</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20" height="20" class="inline-block mb-0.5"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>`;
 		} else {
 			return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20" height="20" class="inline-block mb-0.5"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>${name.toUpperCase()}</span>`;
@@ -75,14 +77,13 @@
 			<a
 				href={adjPage.path}
 				sveltekit:prefetch
-				class="w-[40%] font-bold text-stone-900 underline sm:hidden {adjPage.name === 'Next Guide'
+				class="w-[40%] font-bold text-stone-900 underline sm:hidden {adjPage.name === next
 					? 'text-right'
 					: 'text-left'}">{@html prevNext(adjPage.name)}</a
 			>
 			<a href={adjPage.path} sveltekit:prefetch class="hidden w-[40%] sm:block">
 				<div
-					class="p-4 bg-transparent rounded-lg ring-4 ring-stone-600 group {adjPage.name ===
-					'Next Guide'
+					class="p-4 bg-transparent rounded-lg ring-4 ring-stone-600 group {adjPage.name === next
 						? 'text-right'
 						: 'text-left'}"
 				>
