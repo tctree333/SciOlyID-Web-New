@@ -208,6 +208,9 @@
 			<li class="feature">
 				<a sveltekit:prefetch href="/guides/getting-fancy/">Macaulay Content Filters (Bird-ID)</a>
 			</li>
+			<li class="feature">
+				<a sveltekit:prefetch href="/guides/getting-fancy/">State/Nationals vs Regional Specimens (Minerobo)</a>
+			</li>
 			<li class="feature"><a sveltekit:prefetch href="/guides/racing/">ID Races</a></li>
 			<li class="feature"><a sveltekit:prefetch href="/guides/getting-fancy/">Taxon Groups</a></li>
 			<li class="feature">
