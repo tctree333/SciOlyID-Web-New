@@ -8,6 +8,7 @@
 		class="text-stone-100 bg-stone-800 flex flex-col items-center space-y-4 w-full py-12 text-lg"
 	>
 		<p class="space-x-4">
+			<a href="/open-source/" class="underline">Open Source</a>
 			<a href="/code-of-conduct/" class="underline">Code of Conduct</a>
 			<a href="/privacy/" class="underline">Privacy Policy</a>
 		</p>
