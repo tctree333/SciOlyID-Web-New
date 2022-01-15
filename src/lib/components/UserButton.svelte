@@ -52,7 +52,11 @@
 				<p class="hidden mr-4 lg:block">{profile.username}</p>
 				<img class="h-10 rounded-full sm:h-12" alt="profile" src={profile.avatar} />
 			</button>
-			<div class="absolute p-4 mt-2 bg-stone-200 rounded-md {show ? 'block' : 'hidden'}">
+			<div
+				class="absolute right-0 p-3 md:p-4 mt-2 md:mt-0 md:mr-3 bg-stone-200 rounded-md {show
+					? 'block'
+					: 'hidden'}"
+			>
 				<a class="underline" href={botUrl + config.apiPaths.logout}>Logout</a>
 			</div>
 		</div>
