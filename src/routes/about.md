@@ -17,7 +17,7 @@ SciOlyID is a group of Discord bots and associated services dedicated to helping
 
 ## What's Science Olympiad?
 
-Science Olympiad is a team academic competition for K-12 students where they compete in a variety of science and engineering topics. A Science Olympiad competition typically has 23 different events with teams of 15 students. [Find out more about Science Olympiad on their website](https://www.soinc.org/).
+Science Olympiad is a team academic competition for K-12 students where they compete in a variety of science and engineering topics. A Science Olympiad competition typically has 23 different events with teams of 15 students. [Find out more about Science Olympiad on the official SOINC website](https://www.soinc.org/).
 
 ## What makes SciOlyID unique?
 
@@ -27,7 +27,7 @@ SciOlyID solves all these problems by pulling from a diverse image set and being
 
 ## Funding and Development
 
-Previously, SciOlyID was funded by user donations. For the 2022 season, we are proud to be partnering with National Science Olympiad to cover costs and reach more people. SciOlyID is still 100% volunteer developed and maintained.
+Previously, SciOlyID was funded by user donations. For the 2022 season, we are proud to be partnering with the [2022 National Science Olympiad Tournament, hosted at Caltech](https://scienceolympiad2022.com/), to cover costs and reach more people. SciOlyID is still 100% volunteer developed and maintained.
 
 ## Open Source
 
