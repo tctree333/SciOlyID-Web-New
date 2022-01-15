@@ -80,7 +80,7 @@ Bird-ID also supports bird sounds, using the birds marked for sound ID on the Na
 
 Once you've tried identifying the specimen, you can use the `check` command to see if you're right! For example, you can use `b.c canada goose` on Bird-ID. The bot will check your answer, telling you if you were right or wrong along with the expected answer and a link to Wikipedia or another resource.
 
-The check command is case-insensitive and has some leniency in spelling, so minor typos won't be a problem.
+The check command is case-insensitive and has some leniency in spelling, so minor typos won't be a problem. If you don't want slight misspellings to be counted as correct, you can enable strict spelling during a [study session](/guides/sessions/) or [race](/guides/racing/).
 
 Some specimens also have aliases. For example, `rock salt` is also a valid answer for `halite`. For Bird-ID, the scientific name or 4-letter code are also acceptable answers.
 
