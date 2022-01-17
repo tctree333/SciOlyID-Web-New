@@ -206,26 +206,14 @@
 					}}
 					disabled={loading}>Back</button
 				>
-				<button
-					class="btn btn-green"
-					on:click={() => {
-						genValidation('valid');
-					}}
-					disabled={loading}>Valid</button
+				<button class="btn btn-green" on:click={genValidation('valid')} disabled={loading}
+					>Valid</button
 				>
-				<button
-					class="btn btn-yellow"
-					on:click={() => {
-						genValidation('duplicate');
-					}}
-					disabled={loading}>Duplicate</button
+				<button class="btn btn-yellow" on:click={genValidation('duplicate')} disabled={loading}
+					>Duplicate</button
 				>
-				<button
-					class="btn btn-red"
-					on:click={() => {
-						genValidation('invalid');
-					}}
-					disabled={loading}>Invalid</button
+				<button class="btn btn-red" on:click={genValidation('invalid')} disabled={loading}
+					>Invalid</button
 				>
 				<button
 					class="btn btn-gray"
