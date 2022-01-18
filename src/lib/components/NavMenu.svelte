@@ -6,7 +6,8 @@
 
 	let show = false;
 
-	let id = 'navMenu-' + Math.round(Math.random() * 1000);
+	let menuId = 'navMenu-' + Math.round(Math.random() * 1000);
+	let listId = 'navMenu-sub-' + Math.round(Math.random() * 1000);
 
 	const opacity = tweened(0, { duration: 200 });
 
@@ -21,18 +22,21 @@
 
 <svelte:body
 	on:click={(ev) => {
-		if (show && !ev.target.closest('#' + id)) show = false;
+		if (show && !ev.target.closest('#' + menuId)) show = false;
 	}} />
 
-<span {id}>
+<span id={menuId}>
 	<button
 		class="hidden md:block"
 		on:click={() => {
 			show = !show;
-		}}>{title}</button
+		}}
+		aria-expanded={show}
+		aria-controls={listId}>{title}</button
 	>
 	<span class="block no-underline md:hidden">{title}</span>
 	<ul
+		id={listId}
 		style="--opacity: {$opacity};"
 		class="md:list-none list-disc ml-8 md:ml-0 space-y-1 underline {show
 			? 'md:block'
