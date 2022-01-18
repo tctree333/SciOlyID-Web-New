@@ -175,11 +175,7 @@
 	updatePersonalStats();
 </script>
 
-<Head
-	title="Web Practice: Bird-ID | SciOlyID"
-	description="The web interface for Bird-ID."
-	plausibleDomain="orni.sciolyid.org"
-/>
+<Head title="Web Practice: Bird-ID | SciOlyID" description="The web interface for Bird-ID." />
 
 <main class="prose-content max-w-none">
 	<h1 class="text-center mb-4">Web Practice: Bird-ID</h1>
