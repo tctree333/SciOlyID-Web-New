@@ -17,9 +17,8 @@
 
 	export let canonical: string | undefined = undefined;
 
-	const url = new URL($page.url);
-	url.host = 'sciolyid.org';
-	url.protocol = 'https:';
+	const url = new URL('https://sciolyid.org');
+	url.pathname = $page.url.pathname;
 
 	if (!canonical) {
 		canonical = url.toString();
