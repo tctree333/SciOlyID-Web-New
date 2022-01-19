@@ -184,14 +184,7 @@
 	</p>
 	<div class="not-prose flex flex-wrap px-5 mb-48 max-w-full">
 		<div class="flex-1 max-w-full">
-			<div class="h-24 max-w-full mx-auto w-[720px] leading-snug space-y-2">
-				{#if answered}
-					<p>
-						<strong>You were {answered.status}!</strong><br />The correct answer was {answered.answer}
-						<em>({answered.sciname})</em>.
-						<a class="underline" href={answered.wiki} target="_blank" rel="noopener">Wiki</a>
-					</p>
-				{/if}
+			<div class="h-12 max-w-full mx-auto w-[720px] leading-snug space-y-2">
 				{#if loading}
 					<p>Fetching new bird...</p>
 				{/if}
@@ -229,6 +222,23 @@
 							loading = false;
 						}}>Your browser does not support audio.</audio
 					>
+				{/if}
+			</div>
+			<div
+				class="h-16 max-w-full mx-auto w-[720px] leading-snug my-2 px-3 py-2.5 rounded-md text-base {answered?.status ===
+				'correct'
+					? 'bg-green-200 text-green-900'
+					: answered?.status === 'incorrect'
+					? 'bg-red-200 text-red-900'
+					: ''}"
+			>
+				{#if answered}
+					<p>
+						<strong>You were {answered.status}!</strong><br />The correct answer was
+						<a class="underline" href={answered.wiki} target="_blank" rel="noopener"
+							>{answered.answer} ({answered.sciname}).</a
+						>
+					</p>
 				{/if}
 			</div>
 			<label for="guess" class="sr-only">Your answer</label>
