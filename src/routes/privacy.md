@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy | SciOlyID
-description: 'SciOlyID's Privacy Policy'
+description: SciOlyID's Privacy Policy
 ---
 
 <script context="module">
