@@ -24,6 +24,17 @@ export default {
 			count: false,
 			practice: true,
 			attribution: false
+		},
+		treebo: {
+			eventName: 'Forestry',
+			botName: 'Treebo',
+			baseUrl: '',
+			invite: 'https://discord.gg/2HbshwGjnm',
+			upload: false,
+			verify: false,
+			count: false,
+			practice: false,
+			attribution: false
 		}
 	},
 	apiPaths: {
