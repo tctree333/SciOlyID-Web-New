@@ -82,10 +82,10 @@
 			<p class="mb-4">
 				SciOlyID was born from a need for a better way to practice identification for Science
 				Olympiad, specifically bird ID for Ornithology. We later expanded to Fossils and Reach for
-				the Stars (now discontinued). Currently, we operate Bird-ID for Ornithology and Minerobo for
-				Rocks and Minerals. We support the latest specimen lists in the Science Olympiad rulebook in
-				addition to state-specific bird lists for Ornithology. It's not just images either!
-				Sound-based identification is available for Ornithology too.
+				the Stars (now discontinued). Currently, we operate Bird-ID for Ornithology, Minerobo for
+				Rocks and Minerals, and Treebo for Forestry. We support the latest specimen lists in the
+				Science Olympiad rulebook in addition to state-specific specimen lists. It's not just images
+				either! Sound-based identification is available for Ornithology too.
 			</p>
 			<p class="">
 				Since SciOlyID integrates within Discord, we meet students where they're likely to be,
