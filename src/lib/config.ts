@@ -1,5 +1,5 @@
 export default {
-	invite: 'https://discord.gg/2HbshwGjnm',
+	invite: 'https://discord.com/invite/2HbshwGjnm',
 	bots: {
 		minerobo: {
 			eventName: 'Rocks and Minerals',
@@ -29,7 +29,7 @@ export default {
 			eventName: 'Forestry',
 			botName: 'Treebo',
 			baseUrl: '',
-			invite: 'https://discord.gg/2HbshwGjnm',
+			invite: 'https://discord.com/invite/2HbshwGjnm',
 			upload: false,
 			verify: false,
 			count: false,
