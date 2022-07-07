@@ -29,7 +29,7 @@ export default {
 			eventName: 'Forestry',
 			botName: 'Treebo',
 			baseUrl: '',
-			invite: 'https://discord.com/invite/2HbshwGjnm',
+			invite: 'https://discord.com/oauth2/authorize?client_id=990375195015544883&permissions=51200&scope=bot',
 			upload: false,
 			verify: false,
 			count: false,
