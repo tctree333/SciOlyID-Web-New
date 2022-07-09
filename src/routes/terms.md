@@ -17,6 +17,10 @@ By using SciOlyID bots or services (referred to as "Services"), you agree to thi
 
 SciOlyID may collect certain user data to maintain functionality for the Services. SciOlyID does not sell or share any user data. For more information, see our [Privacy Policy](/privacy/).
 
+## Applicable Law
+
+The federal laws of the United States of America, the laws of the State of California, and the laws of the County of Alameda, California will govern this Terms of Service, your use of the Services, or any dispute of any sort between you and SciOlyID.
+
 ## Acceptable Use
 
 Your use of the Services must not violate any applicable laws or regulations. You agree that you will not use the Services for any purpose that is unlawful or prohibited by law. It is your responsibility to ensure that your use of the Services complies with all applicable laws or regulations.
