@@ -9,7 +9,8 @@ description: SciOlyID's Terms of Service
 
 # SciOlyID's Terms of Service
 
-**Effective: July 23, 2022**
+**Effective (Bird-ID): July 23, 2022**<br>
+**Effective (All other services): July 9, 2022**
 
 By using SciOlyID bots or services (referred to as "Services"), you agree to this Terms of Service.
 
