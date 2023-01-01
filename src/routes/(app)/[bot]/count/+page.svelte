@@ -1,36 +1,12 @@
-<script context="module" lang="ts">
-	throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
-
-	// import config from '$lib/config';
-	// import type { Load } from '@sveltejs/kit';
-
-	// export const load: Load = async ({ params, fetch }) => {
-	// 	const url = config.bots[params.bot].baseUrl + config.apiPaths.count;
-	// 	const res = await fetch(url);
-
-	// 	if (res.ok) {
-	// 		return {
-	// 			props: { counts: await res.json() }
-	// 		};
-	// 	} else {
-	// 		return {
-	// 			status: res.status,
-	// 			error: new Error(`Could not load ${url}: ${res.status} ${res.statusText}`)
-	// 		};
-	// 	}
-	// };
-
-	// export const prerender = true;
-</script>
-
 <script lang="ts">
-	throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
+	import config from '$lib/config';
 	import { page } from '$app/stores';
-	import type { BotMediaCounts } from '$lib/apiTypes';
 	import Head from '$lib/components/Head.svelte';
 
-	export let counts: BotMediaCounts;
+	import type { PageData } from './types';
+	export let data: PageData;
+
+	$: ({ counts } = data);
 </script>
 
 <Head

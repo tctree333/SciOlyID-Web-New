@@ -1,11 +1,12 @@
 <script lang="ts">
-	throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
 	import Head from '$lib/components/Head.svelte';
 	import MarkdownIt from 'markdown-it';
 	const md = new MarkdownIt();
 
-	export let attribution: { [hash: string]: string };
+	import type { PageData } from './types';
+	export let data: PageData;
+
+	$: ({ attribution } = data);
 
 	const renderedAttribs = Object.values(attribution).map((attrib) => md.renderInline(attrib));
 </script>

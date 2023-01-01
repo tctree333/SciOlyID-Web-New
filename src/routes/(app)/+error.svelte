@@ -1,26 +1,13 @@
-<script context="module" lang="ts">
-	throw new Error("@migration task: Replace error load function (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3293209)");
-
-	// import type { ErrorLoad } from '@sveltejs/kit';
-
-	// export const load: ErrorLoad = ({ error, status }) => {
-	// 	return {
-	// 		props: {
-	// 			title: `${status}: ${error.message}`
-	// 		}
-	// 	};
-	// };
-</script>
-
 <script lang="ts">
 	import Head from '$lib/components/Head.svelte';
 	import Image from '$lib/components/Image.svelte';
+	import { page } from '$app/stores';
 
 	import metadata from '$lib/images/red-panda.jpg?metadata';
 	import jpeg from '$lib/images/red-panda.jpg?w=350;450;700;900;1050;1350;1800;2000&jpeg&srcset';
 	import webp from '$lib/images/red-panda.jpg?w=350;450;700;900;1050;1350;1800;2000&webp&srcset';
 
-	export let title: string;
+	$: title = `${$page.status}: ${$page.error.message}`
 </script>
 
 <Head {title} description="An error occurred." index={false} />

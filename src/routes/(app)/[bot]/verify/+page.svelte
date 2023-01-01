@@ -1,28 +1,23 @@
-<script context="module" lang="ts">
-	throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
-
-	// import config from '$lib/config';
-	// import type { Load } from '@sveltejs/kit';
-
-	// const verifyUrls = {
-	// 	getImage: '/verify/',
-	// 	confirm: '/verify/confirm',
-	// 	stats: '/verify/stats'
-	// } as const;
-
-	// export const load: Load = async ({ params }) => {
-	// 	return { props: { baseUrl: config.bots[params.bot].baseUrl } };
-	// };
-</script>
-
 <script lang="ts">
-	throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
 	import { page } from '$app/stores';
 	import Head from '$lib/components/Head.svelte';
 	import { getNotificationsContext } from 'svelte-notifications';
 	import type { VerifyItem, VerifyItemMore, VerifyStats } from '$lib/apiTypes';
 	import { browser } from '$app/env';
+	
+	import config from '$lib/config';
+
+	import type { PageData } from './types';
+	export let data: PageData;
+	
+	$: ({ baseUrl } = data);
+
+	const verifyUrls = {
+		getImage: '/verify/',
+		confirm: '/verify/confirm',
+		stats: '/verify/stats'
+	} as const;
+
 
 	const { addNotification } = getNotificationsContext();
 
@@ -35,7 +30,6 @@
 		});
 	}
 
-	export let baseUrl: string;
 
 	let item: VerifyItemMore;
 	let stats: VerifyStats = { valid: 0, invalid: 0, duplicate: 0 };
