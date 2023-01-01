@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Head from '$lib/components/Head.svelte';
 	import * as MarkdownIt from 'markdown-it';
-	const md = new MarkdownIt();
+	const md = new MarkdownIt.default();
 
 	import type { PageData } from './$types';
 	export let data: PageData;
