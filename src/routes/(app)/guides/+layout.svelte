@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { navigating, page } from '$app/stores';
 
-	import type { PageData } from './types';
+	import type { PageData } from './$types';
 	export let data: PageData;
 
+	let docs = data.docs;
 	$: ({ docs } = data);
 
 	let currentIndex: number;
@@ -54,32 +55,36 @@
 
 <slot />
 
-<div class="flex flex-row justify-between w-full prose-width mx-auto mb-16 px-8">
-	{#each [prevPage, nextPage] as adjPage}
-		{#if adjPage}
-			<a
-				href={adjPage.path}
-				sveltekit:prefetch
-				class="w-[40%] font-bold text-stone-900 underline sm:hidden {adjPage.name === next
-					? 'text-right'
-					: 'text-left'}">{@html prevNext(adjPage.name)}</a
-			>
-			<a href={adjPage.path} sveltekit:prefetch class="hidden w-[40%] sm:block">
-				<div
-					class="p-4 bg-transparent rounded-lg ring-4 ring-stone-600 group {adjPage.name === next
+{#if $page.url.pathname !== '/guides/'}
+	<div
+		data-sveltekit-preload-data="hover"
+		class="flex flex-row justify-between w-full prose-width mx-auto mb-16 px-8"
+	>
+		{#each [prevPage, nextPage] as adjPage}
+			{#if adjPage}
+				<a
+					href={adjPage.path}
+					class="w-[40%] font-bold text-stone-900 underline sm:hidden {adjPage.name === next
 						? 'text-right'
-						: 'text-left'}"
+						: 'text-left'}">{@html prevNext(adjPage.name)}</a
 				>
-					<div class="mb-3 text-sm font-bold text-stone-500">
-						{@html prevNext(adjPage.name)}
+				<a href={adjPage.path} class="hidden w-[40%] sm:block">
+					<div
+						class="p-4 bg-transparent rounded-lg ring-4 ring-stone-600 group {adjPage.name === next
+							? 'text-right'
+							: 'text-left'}"
+					>
+						<div class="mb-3 text-sm font-bold text-stone-500">
+							{@html prevNext(adjPage.name)}
+						</div>
+						<div class="mb-2 text-2xl font-bold text-stone-800 group-hover:underline">
+							{adjPage.title}
+						</div>
 					</div>
-					<div class="mb-2 text-2xl font-bold text-stone-800 group-hover:underline">
-						{adjPage.title}
-					</div>
-				</div>
-			</a>
-		{:else}
-			<div />
-		{/if}
-	{/each}
-</div>
+				</a>
+			{:else}
+				<div />
+			{/if}
+		{/each}
+	</div>
+{/if}

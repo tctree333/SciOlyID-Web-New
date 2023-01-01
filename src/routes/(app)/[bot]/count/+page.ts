@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import config from '$lib/config';
-import type { PageLoad } from '@sveltejs/kit';
+import type { PageLoad } from './$types';
 import type { BotMediaCounts } from '$lib/apiTypes';
 
 export const load: PageLoad = async ({ params, fetch }) => {

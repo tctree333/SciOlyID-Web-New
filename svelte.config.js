@@ -12,9 +12,7 @@ const config = {
 	preprocess: [preprocess({}), mdsvex(mdsvexConfig)],
 
 	kit: {
-		adapter: adapter(),
-
-		trailingSlash: 'always'
+		adapter: adapter()
 	}
 };
 

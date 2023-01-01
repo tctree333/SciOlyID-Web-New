@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import { navigating } from '$app/stores';
 
 	import config from '$lib/config';
@@ -28,11 +28,13 @@
 		if (ev.key === 'Escape') {
 			showMenu = false;
 		}
-	}} />
+	}}
+/>
 
 <nav
 	class="lg:px-12 lg:py-8 py-6 px-8 text-lg lg:text-xl fixed top-0 inset-x-0 bg-stone-100 bg-opacity-90 isolate z-50 w-screen"
 	class:opened={showMenu}
+	data-sveltekit-preload-data="hover"
 >
 	<div class="flex justify-between max-w-7xl mx-auto items-center">
 		<button
@@ -72,7 +74,7 @@
 					/>
 				</svg>{/if}</button
 		>
-		<a sveltekit:prefetch href="/" class="text-3xl md:z-auto z-10 font-semibold flex items-center"
+		<a href="/" class="text-3xl md:z-auto z-10 font-semibold flex items-center"
 			><svg
 				version="1.1"
 				xmlns="http://www.w3.org/2000/svg"
@@ -111,14 +113,14 @@
 		<span
 			class="links flex md:space-x-4 lg:space-x-8 space-y-4 md:space-y-0 md:z-auto z-0 underline md:bg-transparent bg-stone-100"
 		>
-			<a sveltekit:prefetch href="/about/">About</a>
-			<a sveltekit:prefetch href="/guides/">Guides</a>
+			<a href="/about/">About</a>
+			<a href="/guides/">Guides</a>
 			{#each Object.entries(config.bots) as [id, bot]}
 				<NavMenu title={bot.eventName}>
 					{#each Object.entries(config.sitePaths) as [path, info]}
 						{#if bot[path]}
 							<li>
-								<a sveltekit:prefetch href="/{id}/{path}/">{info.name}</a>
+								<a href="/{id}/{path}/">{info.name}</a>
 							</li>
 						{/if}
 					{/each}

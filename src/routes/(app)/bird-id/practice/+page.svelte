@@ -3,7 +3,7 @@
 	import Head from '$lib/components/Head.svelte';
 	import { getNotificationsContext } from 'svelte-notifications';
 	import type { BirdIDProfile } from '$lib/apiTypes';
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 
 	let baseUrl = config.bots['bird-id'].baseUrl;
 	const practiceUrls = {
@@ -235,7 +235,7 @@
 				{#if answered}
 					<p>
 						<strong>You were {answered.status}!</strong><br />The correct answer was
-						<a class="underline" href={answered.wiki} target="_blank" rel="noopener"
+						<a class="underline" href={answered.wiki} target="_blank" rel="noopener noreferrer"
 							>{answered.answer} ({answered.sciname}).</a
 						>
 					</p>

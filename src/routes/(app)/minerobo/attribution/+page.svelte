@@ -1,11 +1,12 @@
 <script lang="ts">
 	import Head from '$lib/components/Head.svelte';
-	import MarkdownIt from 'markdown-it';
+	import * as MarkdownIt from 'markdown-it';
 	const md = new MarkdownIt();
 
-	import type { PageData } from './types';
+	import type { PageData } from './$types';
 	export let data: PageData;
 
+	let attribution = data.attribution;
 	$: ({ attribution } = data);
 
 	const renderedAttribs = Object.values(attribution).map((attrib) => md.renderInline(attrib));

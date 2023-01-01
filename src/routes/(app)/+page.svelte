@@ -24,7 +24,7 @@
 
 		<svelte:fragment slot="cta">
 			<a
-				sveltekit:prefetch
+				data-sveltekit-preload-data="hover"
 				href="/guides/getting-started/"
 				class="rounded-md px-3 py-2 flex items-center max-w-fit border-2 border-lime-800 bg-lime-800 text-stone-100 hover:shadow-md my-2"
 				>Get Started<svg
@@ -190,37 +190,39 @@
 	</Section>
 	<Section wrapperClass="pb-8" id="features">
 		<svelte:fragment slot="title">Features</svelte:fragment>
-		<ul slot="content" class="flex flex-wrap items-center justify-center max-w-6xl mx-auto w-full">
+		<ul
+			slot="content"
+			data-sveltekit-preload-data="hover"
+			class="flex flex-wrap items-center justify-center max-w-6xl mx-auto w-full"
+		>
 			<li class="feature">
-				<a sveltekit:prefetch href="/guides/getting-started/">Bird Song ID Practice (Bird-ID)</a>
+				<a href="/guides/getting-started/">Bird Song ID Practice (Bird-ID)</a>
 			</li>
 			<li class="feature">
-				<a sveltekit:prefetch href="/guides/getting-fancy/">State-Specific Bird Lists (Bird-ID)</a>
+				<a href="/guides/getting-fancy/">State-Specific Bird Lists (Bird-ID)</a>
 			</li>
 			<li class="feature">
-				<a sveltekit:prefetch href="/guides/getting-fancy/">Custom Bird List (Bird-ID)</a>
+				<a href="/guides/getting-fancy/">Custom Bird List (Bird-ID)</a>
 			</li>
 			<li class="feature">
-				<a sveltekit:prefetch href="/guides/getting-fancy/">Macaulay Content Filters (Bird-ID)</a>
+				<a href="/guides/getting-fancy/">Macaulay Content Filters (Bird-ID)</a>
 			</li>
 			<li class="feature">
-				<a sveltekit:prefetch href="/guides/getting-fancy/"
-					>State/Nationals vs Regional Specimens (Minerobo)</a
-				>
+				<a href="/guides/getting-fancy/">State/Nationals vs Regional Specimens (Minerobo)</a>
 			</li>
-			<li class="feature"><a sveltekit:prefetch href="/guides/racing/">ID Races</a></li>
-			<li class="feature"><a sveltekit:prefetch href="/guides/getting-fancy/">Taxon Groups</a></li>
+			<li class="feature"><a href="/guides/racing/">ID Races</a></li>
+			<li class="feature"><a href="/guides/getting-fancy/">Taxon Groups</a></li>
 			<li class="feature">
-				<a sveltekit:prefetch href="/guides/viewing-stats/">Score Leaderboards</a>
+				<a href="/guides/viewing-stats/">Score Leaderboards</a>
 			</li>
 			<li class="feature">
-				<a sveltekit:prefetch href="/guides/viewing-stats/">Commonly Missed IDs</a>
+				<a href="/guides/viewing-stats/">Commonly Missed IDs</a>
 			</li>
-			<li class="feature"><a sveltekit:prefetch href="/guides/sessions/">Study Sessions</a></li>
+			<li class="feature"><a href="/guides/sessions/">Study Sessions</a></li>
 			<li class="feature">
-				<a sveltekit:prefetch href="/guides/getting-fancy/">Black and White Image Filter</a>
+				<a href="/guides/getting-fancy/">Black and White Image Filter</a>
 			</li>
-			<li class="feature"><a sveltekit:prefetch href="/guides/getting-started/">and more...</a></li>
+			<li class="feature"><a href="/guides/getting-started/">and more...</a></li>
 		</ul>
 	</Section>
 	<Section

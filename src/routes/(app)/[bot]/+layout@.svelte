@@ -5,9 +5,10 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
-	import type { PageData } from './types';
+	import type { PageData } from './$types';
 	export let data: PageData;
 
+	let botUrl = data.botUrl;
 	$: ({ botUrl } = data);
 	setContext('botUrl', botUrl);
 </script>

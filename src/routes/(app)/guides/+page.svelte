@@ -1,9 +1,10 @@
 <script lang="ts">
 	import Head from '$lib/components/Head.svelte';
 
-	import type { PageData } from './types';
+	import type { PageData } from './$types';
 	export let data: PageData;
 
+	let docs = data.docs;
 	$: ({ docs } = data);
 </script>
 
@@ -27,10 +28,10 @@ various available features."
 		<a href="/guides/getting-started/">“Getting Started”</a>.
 	</p>
 	<nav>
-		<ol>
+		<ol data-sveltekit-preload-data="hover">
 			{#each docs as { title, path, description }}
 				<li>
-					<a sveltekit:prefetch href={path}>{title}</a>
+					<a href={path}>{title}</a>
 					<div>{description}</div>
 				</li>
 			{/each}

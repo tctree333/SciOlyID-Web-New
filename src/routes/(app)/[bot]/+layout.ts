@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import config from '$lib/config';
 
-import type { PageLoad } from '@sveltejs/kit';
+import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ url, params }) => {
 	if (
@@ -10,9 +10,11 @@ export const load: PageLoad = async ({ url, params }) => {
 		config.bots[params.bot][url.pathname.split('/')[2]]
 	) {
 		return {
-			 botUrl: config.bots[params.bot].baseUrl 
+			botUrl: config.bots[params.bot].baseUrl
 		};
 	} else {
 		throw error(404, 'Not found');
 	}
 };
+
+export const trailingSlash = 'always';

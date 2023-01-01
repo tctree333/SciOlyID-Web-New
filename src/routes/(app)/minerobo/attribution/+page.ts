@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import type { PageLoad } from '@sveltejs/kit';
+import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch }) => {
 	const url = 'https://raw.githubusercontent.com/tctree333/Minerobo/main/image_attributions.json';

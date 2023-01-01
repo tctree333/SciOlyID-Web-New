@@ -2,7 +2,7 @@
 	import FooterIllustrations from './svg/FooterIllustrations.svelte';
 </script>
 
-<footer class="overflow-x-hidden">
+<footer class="overflow-x-hidden" data-sveltekit-preload-data="hover">
 	<FooterIllustrations />
 	<div
 		class="text-stone-100 bg-stone-800 flex flex-col items-center space-y-4 w-full py-12 text-lg"

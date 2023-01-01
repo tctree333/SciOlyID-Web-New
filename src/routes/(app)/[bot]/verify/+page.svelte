@@ -3,13 +3,14 @@
 	import Head from '$lib/components/Head.svelte';
 	import { getNotificationsContext } from 'svelte-notifications';
 	import type { VerifyItem, VerifyItemMore, VerifyStats } from '$lib/apiTypes';
-	import { browser } from '$app/env';
-	
+	import { browser } from '$app/environment';
+
 	import config from '$lib/config';
 
-	import type { PageData } from './types';
+	import type { PageData } from './$types';
 	export let data: PageData;
-	
+
+	let baseUrl = data.baseUrl
 	$: ({ baseUrl } = data);
 
 	const verifyUrls = {
@@ -17,7 +18,6 @@
 		confirm: '/verify/confirm',
 		stats: '/verify/stats'
 	} as const;
-
 
 	const { addNotification } = getNotificationsContext();
 
@@ -29,7 +29,6 @@
 			removeAfter: 20 * 1000
 		});
 	}
-
 
 	let item: VerifyItemMore;
 	let stats: VerifyStats = { valid: 0, invalid: 0, duplicate: 0 };

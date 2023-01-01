@@ -3,9 +3,10 @@
 	import { page } from '$app/stores';
 	import Head from '$lib/components/Head.svelte';
 
-	import type { PageData } from './types';
+	import type { PageData } from './$types';
 	export let data: PageData;
 
+	let counts = data.counts;
 	$: ({ counts } = data);
 </script>
 
