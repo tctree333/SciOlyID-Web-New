@@ -7,9 +7,9 @@
 	import Modal from 'svelte-simple-modal';
 	import { page } from '$app/stores';
 
-	import metadata from '$lib/images/red-panda.jpg?metadata';
-	import jpeg from '$lib/images/red-panda.jpg?w=350;450;700;900;1050;1350;1800;2000&jpeg&srcset';
-	import webp from '$lib/images/red-panda.jpg?w=350;450;700;900;1050;1350;1800;2000&webp&srcset';
+	import metadata from '$lib/images/red-panda.jpg?as=metadata';
+	import jpeg from '$lib/images/red-panda.jpg?w=350;450;700;900;1050;1350;1800;2000&format=jpeg&as=srcset';
+	import webp from '$lib/images/red-panda.jpg?w=350;450;700;900;1050;1350;1800;2000&format=webp&as=srcset';
 
 	$: title = `${$page.status}: ${$page.error.message}`;
 </script>
