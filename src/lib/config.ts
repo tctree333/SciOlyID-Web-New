@@ -1,17 +1,29 @@
 export default {
 	invite: 'https://discord.com/invite/2HbshwGjnm',
 	bots: {
-		minerobo: {
-			eventName: 'Rocks and Minerals',
-			botName: 'Minerobo',
-			baseUrl: 'https://minerobo.sciolyid.org',
+		treebo: {
+			eventName: 'Forestry',
+			botName: 'Treebo',
+			baseUrl: '',
 			invite:
-				'https://discord.com/api/oauth2/authorize?client_id=821143596232474684&permissions=51200&scope=bot',
+				'https://discord.com/api/oauth2/authorize?client_id=990375195015544883&permissions=51200&scope=bot',
 			upload: false,
-			verify: true,
-			count: true,
+			verify: false,
+			count: false,
 			practice: false,
-			attribution: true
+			attribution: false
+		},
+		'fossil-id': {
+			eventName: 'Fossils',
+			botName: 'Fossil-ID',
+			baseUrl: '',
+			invite:
+				'https://discord.com/api/oauth2/authorize?client_id=678437690848313373&permissions=51200&scope=bot',
+			upload: false,
+			verify: false,
+			count: false,
+			practice: false,
+			attribution: false
 		},
 		'bird-id': {
 			eventName: 'Ornithology',
@@ -25,16 +37,17 @@ export default {
 			practice: true,
 			attribution: false
 		},
-		treebo: {
-			eventName: 'Forestry',
-			botName: 'Treebo',
-			baseUrl: '',
-			invite: 'https://discord.com/oauth2/authorize?client_id=990375195015544883&permissions=51200&scope=bot',
+		minerobo: {
+			eventName: 'R & M',
+			botName: 'Minerobo',
+			baseUrl: 'https://minerobo.sciolyid.org',
+			invite:
+				'https://discord.com/api/oauth2/authorize?client_id=821143596232474684&permissions=51200&scope=bot',
 			upload: false,
-			verify: false,
-			count: false,
+			verify: true,
+			count: true,
 			practice: false,
-			attribution: false
+			attribution: true
 		}
 	},
 	apiPaths: {

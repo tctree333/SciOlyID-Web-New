@@ -11,12 +11,14 @@ Want to contribute? Or want to take a peek behind the scenes? Check out our repo
 
 - [Bird-ID](https://github.com/tctree333/Bird-ID)
 - [Minerobo](https://github.com/tctree333/Minerobo)
+- [Fossil-ID](https://github.com/tctree333/Fossil-ID)
+- [Treebo](https://github.com/tctree333/Treebo)
 - [SciOly-ID Package](https://github.com/tctree333/SciOly-ID)
 - [SciOlyID Website (current)](https://github.com/tctree333/SciOlyID-Web-New)
+- [SciOlyID Actions](https://github.com/tctree333/SciOlyID-Actions)
 
 These repos are discontinued or archived.
 
-- [Fossil-ID (discontinued)](https://github.com/tctree333/Fossil-ID)
 - [Star-ID (discontinued)](https://github.com/tctree333/Reach-For-The-Stars-Bot)
 - [Bird-ID Practice Site (archived)](https://github.com/tctree333/Bird-ID-site)
 - [Old SciOlyID Website (archived)](https://github.com/tctree333/SciOlyID-Web)

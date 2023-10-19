@@ -24,7 +24,7 @@ SciOlyID solves all these problems by pulling from a diverse image set and being
 
 ## Funding and Development
 
-Previously, SciOlyID was funded by user donations. For the 2022 season, we are proud to be partnering with the [2022 National Science Olympiad Tournament, hosted at Caltech](https://scienceolympiad2022.com/), to cover costs and reach more people. SciOlyID is still 100% volunteer developed and maintained.
+Previously, SciOlyID was funded by user donations. In the 2022 season, we partnered with the [2022 National Science Olympiad Tournament, hosted at Caltech](https://scienceolympiad2022.com/) to cover costs and reach more people. SciOlyID is still 100% volunteer developed and maintained.
 
 ## Open Source
 
